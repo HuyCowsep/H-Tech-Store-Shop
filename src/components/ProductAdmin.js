@@ -140,6 +140,9 @@ export default function ProductAdmin() {
           <Button variant="info" as={Link} to="/User/productUser" style={{ display: "block", width: "100%", marginTop: "10px" }}>
             Quản lý tài khoản
           </Button>
+          <Button variant="dark" as={Link} to="/productadmin" style={{ display: "block", width: "100%", marginTop: "10px" }}>
+            Quản lý sản phẩm
+          </Button>
         </Col>
         {/*Cột phải */}
         <Col xs={12} sm={9} md={10} className="products-container">
