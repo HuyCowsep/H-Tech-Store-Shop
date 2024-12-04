@@ -1,0 +1,1110 @@
+{
+  "products": [
+    {
+      "id": "P0001",
+      "name": "Tivi LG UHD - AI Voice",
+      "price": 20000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Với công nghệ hiện đại như OLED và QLED, tivi LG mang đến trải nghiệm xem phim tuyệt vời",
+      "date": "2024-04-28",
+      "status": "Còn hàng",
+      "image": "/assets/images/product1.png"
+    },
+    {
+      "id": "P0002",
+      "name": "Smart Tivi Sony 4kHD",
+      "price": 10000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Với các công nghệ tiên tiến như Bravia và Dolby Atmos, TV Sony tạo ra những trải nghiệm tuyệt vời",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product2.png"
+    },
+    {
+      "id": "P0003",
+      "name": "Samsung Neo QLED",
+      "price": 11520000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Tận hưởng trải nghiệm giải trí tuyệt vời với độ phân giải 4K Ultra HD, mang đến hình ảnh chân thực đến từng điểm ảnh.",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product50.png"
+    },
+    {
+      "id": "P0004",
+      "name": "Panasonic JZ2000 OLED",
+      "price": 11000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "VVới công nghệ HDR, cung cấp màu sắc sống động, độ tương phản cao, mang lại hình ảnh sâu và tự nhiên hơn.",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product51.png"
+    },
+    {
+      "id": "P0005",
+      "name": "Xiaomi Mi TV Q1",
+      "price": 12000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Tích hợp hệ điều hành thông minh như Android TV hoặc WebOS, cho phép bạn truy cập ứng dụng yêu thích",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product52.png"
+    },
+    {
+      "id": "P0006",
+      "name": "TCL QLED 6-Series",
+      "price": 13000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Công nghệ âm thanh Dolby Atmos đem đến trải nghiệm âm thanh sống động, khiến bạn đắm chìm vào không gian như rạp chiếu phim.",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product53.png"
+    },
+    {
+      "id": "P0007",
+      "name": "Sony Bravia XR",
+      "price": 14000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Tivi sở hữu thiết kế mỏng, viền màn hình siêu mỏng, phù hợp với mọi không gian nội thất hiện đại.",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product54.png"
+    },
+    {
+      "id": "P0008",
+      "name": "LG OLED C3",
+      "price": 15000000,
+      "quantity": 20,
+      "catID": "1",
+      "descreption": "Đây là phiên bản tiêu chuẩn với màn hình 6.1 inch và bộ vi xử lý A18, mang lại hiệu năng nhanh hơn 30% so với thế hệ trước",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product55.png"
+    },
+    {
+      "id": "P0009",
+      "name": "iPhone 16",
+      "price": 29000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Trang bị đầy đủ cổng HDMI, USB, Wi-Fi và Bluetooth, giúp bạn dễ dàng kết nối với các thiết bị ngoại vi như loa, điện thoại và laptop.",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product56.png"
+    },
+    {
+      "id": "P0010",
+      "name": "iPhone 16 Plus",
+      "price": 30000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Giống với iPhone 16 nhưng được trang bị màn hình lớn hơn (6.7 inch) và pin bền hơn, lý tưởng cho người dùng cần thời lượng sử dụng lâu dài",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product57.png"
+    },
+    {
+      "id": "P0011",
+      "name": "iPhone 16 Pro",
+      "price": 32000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Với khung viền titanium và màn hình 6.3 inch, phiên bản này tích hợp công nghệ ProMotion, camera Fusion 48MP và chip A18 Pro",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product58.png"
+    },
+    {
+      "id": "P0012",
+      "name": "iPhone 16 Promax",
+      "price": 35000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Là phiên bản cao cấp nhất, màn hình 6.9 inch, pin lâu nhất và hệ thống camera telephoto 5x, quay video Dolby Vision và (Night Mode Portrait)​",
+      "date": "2024-04-29",
+      "status": "Còn hàng",
+      "image": "/assets/images/product59.png"
+    },
+    {
+      "id": "P0013",
+      "name": "Iphone 15 plus 128GB màu vàng Gold",
+      "price": 21000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Apple mới ra mắt điện thoại thông minh kết hợp nhiều chức năng",
+      "date": "2024-04-27",
+      "status": "Còn hàng",
+      "image": "/assets/images/product3.png"
+    },
+    {
+      "id": "P0014",
+      "name": "Iphone 12 plus 128GB xanh tím",
+      "price": 11000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Iphone 12 tuy đã ra mắt được vài năm nhưng vẫn được mọi người lựa chọn",
+      "date": "2024-04-22",
+      "status": "Còn hàng",
+      "image": "/assets/images/product4.png"
+    },
+    {
+      "id": "P0015",
+      "name": "Iphone 12 Promax 64GB",
+      "price": 13220000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Điện thoại đã qua sử dụng full chức năng không lỗi lầm giá rẻ",
+      "date": "2024-04-21",
+      "status": "Còn hàng",
+      "image": "/assets/images/product5.png"
+    },
+    {
+      "id": "P0016",
+      "name": "Iphone 11 Promax 128GB",
+      "price": 8930000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Iphone like new, đã thay màn hình, dung lượng pin 8x%, giá rẻ",
+      "date": "2024-04-11",
+      "status": "Còn hàng",
+      "image": "/assets/images/product6.png"
+    },
+    {
+      "id": "P0017",
+      "name": "iPad Pro M2 11 inch WiFi Cellular 128GB",
+      "price": 31500000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Ngoài Iphone 15Promax thì Ipad chip M2 cũng được gọi là Ngang hàng cùng",
+      "date": "2024-04-23",
+      "status": "Còn hàng",
+      "image": "/assets/images/product7.png"
+    },
+    {
+      "id": "P0018",
+      "name": "Tủ lạnh Darling 150cm nhỏ gọn tiện nghi",
+      "price": 7660000,
+      "quantity": 20,
+      "catID": "3",
+      "descreption": "Tủ lạnh hiện đại 2 cánh có nhiều chức năng và cực kỳ an toàn",
+      "date": "2024-04-30",
+      "image": "/assets/images/product8.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0019",
+      "name": "Laptop TUF fx506p-l_tra nsparent",
+      "price": 21450000,
+      "quantity": 50,
+      "catID": "2",
+      "descreption": "Laptop thế hệ mới, tích hợp card đồ họa chơi game siêu mượt, tuổi thọ pin lâu đời",
+      "date": "2024-05-30",
+      "image": "/assets/images/product9.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0020",
+      "name": "Laptop Gaming Asus TUF 15fv507",
+      "price": 28150000,
+      "quantity": 25,
+      "catID": "2",
+      "descreption": "Laptop thế hệ mới, tích hợp card đồ họa chơi game siêu mượt, siêu rẻ kết hợp sạc nhanh",
+      "date": "2024-09-30",
+      "image": "/assets/images/product10.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0021",
+      "name": "Laptop Gaming ASUS Asprie 7",
+      "price": 25650000,
+      "quantity": 52,
+      "catID": "2",
+      "descreption": "Laptop gaming thế hệ mới với màn hình full HD không đau mắt",
+      "date": "2024-04-03",
+      "image": "/assets/images/product11.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0022",
+      "name": "Laptop Gaming ACER Nitro 51140P",
+      "price": 35380000,
+      "quantity": 212,
+      "catID": "2",
+      "descreption": "Là niềm tự hòa của các gamer khi tham gia giải đấu, với card đồ họa siêu nét trân thực",
+      "date": "2024-03-31",
+      "image": "/assets/images/product12.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0023",
+      "name": "Laptop Gaming Acer Nitro Otigeran515",
+      "price": 17250000,
+      "quantity": 15,
+      "catID": "2",
+      "descreption": "Card đồ họa max, quạt tản nhiệt lạnh, màn hình 1080HD",
+      "date": "2024-06-14",
+      "image": "/assets/images/product13.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0024",
+      "name": "Laptop Asus Tuf 506ffx",
+      "price": 22000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Card đồ họa 6080, 32Gram, đồ họa siêu mượt kết hợp tản nhiệt lạnh",
+      "date": "2024-02-12",
+      "image": "/assets/images/product14.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0025",
+      "name": "Laptop MSI Gaming cyb15",
+      "price": 26000000,
+      "quantity": 20,
+      "catID": "2",
+      "descreption": "Laptop Gaming hiện đại, pin cực trâu, có tích hợp sạc nhanh",
+      "date": "2024-04-06",
+      "image": "/assets/images/product15.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0026",
+      "name": "Laptop Gaming MSI f63",
+      "price": 31000000,
+      "quantity": 53,
+      "catID": "2",
+      "descreption": "Laptop Gaming hiện đại, pin cực trâu, có tích hợp sạc nhanh, đồ họa mượt",
+      "date": "2024-04-11",
+      "image": "/assets/images/product16.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0027",
+      "name": "SamSung Galaxy S23 Ultra",
+      "price": 45000000,
+      "quantity": 200,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, camera siêu nét zoom 10x",
+      "date": "2024-02-12",
+      "image": "/assets/images/product17.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0028",
+      "name": "SamSung Galayxy-ZFlip5",
+      "price": 12000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, có thể gập màn hình, chia đôi màn hình tùy ý",
+      "date": "2024-06-28",
+      "image": "/assets/images/product18.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0029",
+      "name": "Tủ lạnh Samsung Inverter 488 lít RF48A4010B4/SV",
+      "price": 60000000,
+      "quantity": 90,
+      "catID": "3",
+      "descreption": "Tủ lạnh thông minh tiết kiệm điện, nhiều chức năng và khoang chứa rộng. Làm mát tức thì",
+      "date": "2024-03-31",
+      "image": "/assets/images/product19.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0030",
+      "name": "Tủ lạTủ lạnh Samsung Inverter 635 lít RS64R5",
+      "price": 64000000,
+      "quantity": 105,
+      "catID": "3",
+      "descreption": "Tủ lạnh hiện đại, có sức chứa lên tới 200kg đồ ăn và chức năng đông đá khẩn cấp",
+      "date": "2024-01-28",
+      "image": "/assets/images/product20.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0031",
+      "name": "Tủ lạnh Hiện đại Casper",
+      "price": 52000000,
+      "quantity": 110,
+      "catID": "3",
+      "descreption": "Tủ lạnh hiện đại 1 cánh, đáp ứng đầy đủ nhu cầu tiện nghi trong gia đình",
+      "date": "2024-06-21",
+      "image": "/assets/images/product21.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0032",
+      "name": "Tủ lạnh 2 cánh Hiện đại - Casper",
+      "price": 59000000,
+      "quantity": 110,
+      "catID": "3",
+      "descreption": "Tủ lạnh 2 cánh với đầy đủ chức năng, tích hợp đông đá viên ngoài cánh tủ.",
+      "date": "2024-04-28",
+      "image": "/assets/images/product22.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0033",
+      "name": "Quạt Điều Hòa Hơi Nước 220V",
+      "price": 3000000,
+      "quantity": 210,
+      "catID": "1",
+      "descreption": "Quạt điều hòa bằng hơi nước, tốc độ gió mạnh và có khay bỏ đá",
+      "date": "2024-06-15",
+      "image": "/assets/images/product23.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0034",
+      "name": "Quạt điện cây Hơi Nước Hàn Quốc",
+      "price": 1500000,
+      "quantity": 100,
+      "catID": "1",
+      "descreption": "Quạt cây hơi nước 3 chế độ gió, phun sương chống làm khô da",
+      "date": "2024-07-2-18",
+      "image": "/assets/images/product24.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0035",
+      "name": "Quạt hơi nước Casper 250V",
+      "price": 1000000,
+      "quantity": 110,
+      "catID": "1",
+      "descreption": "Quạt hơi nước 4 mức gió, có khay bỏ đá chế độ phun sương hơi nước",
+      "date": "2024-01-28",
+      "image": "/assets/images/product25.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0036",
+      "name": "Quạt điều hòa - điện máy Khánh Hưng",
+      "price": 1200000,
+      "quantity": 110,
+      "catID": "1",
+      "descreption": "Quạt điều hòa không cần cho đá, chức năng làm mát bằng điện tiện nghi",
+      "date": "2024-06-23",
+      "image": "/assets/images/product26.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0037",
+      "name": "Ipad Gen I10",
+      "price": 11000000,
+      "quantity": 50,
+      "catID": "2",
+      "descreption": "Ipad Pro gen i10, màn hình 120hz, đáp ứng vừa đủ Cấu hình cao",
+      "date": "2024-06-28",
+      "image": "/assets/images/product27.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0038",
+      "name": "Ipad Pro Gen 9",
+      "price": 5000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Ipad màn hình 120Hz, bắn PUBG siêu mượt",
+      "date": "2024-06-28",
+      "image": "/assets/images/product28.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0039",
+      "name": "SamSung S24 Ultra",
+      "price": 6000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, tích hợp que vẽ cảm ứng",
+      "date": "2024-06-28",
+      "image": "/assets/images/product29.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0040",
+      "name": "SamSung Galayxy-Z4",
+      "price": 7000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng màn hình 60hz",
+      "date": "2024-06-28",
+      "image": "/assets/images/product30.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0041",
+      "name": "Oppo NEO 3",
+      "price": 8000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, đầy đủ chức năng phổ thông cần thiết",
+      "date": "2024-06-28",
+      "image": "/assets/images/product31.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0042",
+      "name": "Oppo A30",
+      "price": 9000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, đỗ trễ thấp, đầy đủ chức năng",
+      "date": "2024-06-28",
+      "image": "/assets/images/product32.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0043",
+      "name": "Oppo A38",
+      "price": 6000000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, đầy đủ chức năng cần thiết",
+      "date": "2024-06-28",
+      "image": "/assets/images/product33.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0044",
+      "name": "Oppo J5",
+      "price": 11453000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông min, màn hình cảm ứng, đầy đủ chức năng cần thiết",
+      "date": "2024-06-28",
+      "image": "/assets/images/product34.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0045",
+      "name": "Oppo D9",
+      "price": 15123700,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Điện thoại thông minh full màn hình cảm ứng, chia đôi màn hình tùy ý",
+      "date": "2024-06-28",
+      "image": "/assets/images/product35.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0046",
+      "name": "Điều hòa cây 2,2m làm lạnh 16 độ C",
+      "price": 14537830,
+      "quantity": 110,
+      "catID": "1",
+      "descreption": "Điều hòa cây 12 chế độ phù hợp cho mọi thời tiết",
+      "date": "2024-06-28",
+      "image": "/assets/images/product36.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0047",
+      "name": "Điều hòa cây Casper",
+      "price": 64537710,
+      "quantity": 110,
+      "catID": "1",
+      "descreption": "Điều hòa hiện đại nhiều chức năng, làm lạnh phòng nhanh ở nơi đông đúc",
+      "date": "2024-06-28",
+      "image": "/assets/images/product37.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0048",
+      "name": "Điều hòa cây LG",
+      "price": 84537830,
+      "quantity": 110,
+      "catID": "1",
+      "descreption": "Điều hòa hiện đại có thể thay thế điều hòa gắn trần nhà, nhiều chức năng và làm mát nhanh",
+      "date": "2024-06-28",
+      "image": "/assets/images/product38.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0049",
+      "name": "Bộ dàn loa, âm ly hiện đại",
+      "price": 3457834,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Dàn loa âm ly hiện đại max volume phù hợp cho phòng hát karaoke",
+      "date": "2024-06-28",
+      "image": "/assets/images/product39.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0050",
+      "name": "Loa Bluetooth Onii",
+      "price": 7589541,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Loa kết nối bluetooth, khởi động từ xa và bass siêu hay",
+      "date": "2024-06-28",
+      "image": "/assets/images/product40.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0051",
+      "name": "Loa bluetooth ACCEE",
+      "price": 5632165,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Loa bluetooth có trợ lý ảo và có thể chống nước.",
+      "date": "2024-06-28",
+      "image": "/assets/images/product41.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0052",
+      "name": "Loa bluetooth GooDoo",
+      "price": 5403000,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Loa bluetooth có trợ lý ảo kết hợp đồng hồ báo thức, có quạt gió mini tản nhiệt",
+      "date": "2024-06-28",
+      "image": "/assets/images/product42.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0053",
+      "name": "Loa bluetooth Amazon AS998NB Pas",
+      "price": 5364145,
+      "quantity": 110,
+      "catID": "2",
+      "descreption": "Loa bluetooth 4 nút bấm và có thể kết nối từ xa, chống nước và bass hay",
+      "date": "2024-06-28",
+      "image": "/assets/images/product43.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0054",
+      "name": "Loa bluetooth thông minh kèm trợ lý ảo",
+      "price": 59512444,
+      "quantity": 120,
+      "catID": "2",
+      "descreption": "Loa bluetooth thông minh, có trợ lý ảo bằng giọng nói, thời lượng pin cao",
+      "date": "2023-03-28",
+      "image": "/assets/images/product44.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0055",
+      "name": "Máy Giặt TOSHIBA 9.5Kg TW-BK105S3V (SK)",
+      "price": 6251444,
+      "quantity": 120,
+      "catID": "3",
+      "descreption": "Sở hữu gam màu tối lịch lãm, kết hợp với kiểu dáng cửa trước hiện đại, hứa hẹn sẽ mang đến cho không gian nội thất của gia đình bạn vẻ đẹp sang trọng, tinh tế.",
+      "date": "2023-03-30",
+      "image": "/assets/images/product45.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0056",
+      "name": "Máy rửa bát bán âm Richborn RDG6080SQB",
+      "price": 9251444,
+      "quantity": 120,
+      "catID": "3",
+      "descreption": "Điều khiển thông qua nút xoay công thái học và màn hình LED, cùng với động cơ BLDC kép hoàn hảo.",
+      "date": "2023-09-30",
+      "image": "/assets/images/product46.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0057",
+      "name": "Máy rửa chén độc lập Bosch SMS2IVI61E",
+      "price": 10251400,
+      "quantity": 120,
+      "catID": "3",
+      "descreption": "Thiết kế nhỏ gọn, nổi bật với tone màu bạc đẹp mắt với phong cách tối giản nhưng không kém phần sang trọng, cho phép người dùng lắp đặt dễ dàng và phù hợp với mọi không gian bếp..",
+      "date": "2023-09-21",
+      "image": "/assets/images/product47.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0058",
+      "name": "Máy rửa bát hiện đại BAUER SBW21EU13F",
+      "price": 12251400,
+      "quantity": 120,
+      "catID": "3",
+      "descreption": "Tiêu chuẩn tiết kiệm năng lượng châu âu A+, độ ổn định và độ bền cao, bảo hành 3 năm",
+      "date": "2023-09-22",
+      "image": "/assets/images/product48.png",
+      "status": "Còn hàng"
+    },
+    {
+      "id": "P0059",
+      "name": "Lò sưởi điện 3D, 60cm (SLL101)",
+      "price": 3251400,
+      "quantity": 120,
+      "catID": "3",
+      "descreption": "Chất liệu: Hợp kim cao cấp. Kích thước: 60*16*52cm.Kích thước tùy chỉnh liên hệ dịch vụ khách hàng để nhận tư vấn",
+      "date": "2023-09-22",
+      "image": "/assets/images/product49.png",
+      "status": "Còn hàng"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Điện tử - điện lạnh"
+    },
+    {
+      "id": "2",
+      "name": "Laptop-IPhone-Speaker"
+    },
+    {
+      "id": "3",
+      "name": "Thiết bị gia dụng"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "1",
+      "name": "Administrator",
+      "email": "admin1@gmail.com",
+      "password": "123456",
+      "dob": "2024-04-18",
+      "gender": "nam",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "User4",
+      "email": "user4@gmail.com",
+      "password": "123456",
+      "dob": "2024-04-26",
+      "gender": "nữ",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Nguyễn Đức Huy",
+      "email": "huyndhe176876@fpt.edu.vn",
+      "password": "123456",
+      "dob": "2003-03-31",
+      "gender": "nam",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Dương Thị Quỳnh Anh",
+      "email": "anhxinhgai@gmail.com",
+      "password": "123456",
+      "dob": "2004-05-29",
+      "gender": "nữ",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "41",
+      "name": "JohnMAthem",
+      "email": "john@gmail.com",
+      "password": "123456",
+      "dob": "2014-11-28",
+      "gender": "female",
+      "role": "user",
+      "isActive": true
+    },
+    {
+      "id": "411",
+      "name": "Tester5555",
+      "email": "a@gmai.com",
+      "password": "123123",
+      "dob": "2002-12-12",
+      "gender": "male",
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": "4111",
+      "name": "Alo ALo",
+      "email": "b@gmail.com",
+      "password": "123123",
+      "dob": "2004-11-28",
+      "gender": "female",
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": "41111",
+      "name": "Nông Văn Mạnh",
+      "email": "manh@gmail.com",
+      "password": "123123",
+      "dob": "2003-11-11",
+      "gender": "male",
+      "role": "user"
+    }
+  ],
+  "orderDetailsNoLogin": [
+    {
+      "id": "de57",
+      "orderDate": "2024-04-23",
+      "requestDate": "2024-05-11",
+      "status": "Approved",
+      "customer": {
+        "firstName": "Michale",
+        "lastName": "Jackson",
+        "address": "California, America",
+        "phone": "1230456987",
+        "email": "jacksonhothot@gmail.com"
+      },
+      "product": [
+        {
+          "pid": "P0007",
+          "pName": "iPad Pro Chip M2 11 inch WiFi Cellular 128GB",
+          "price": 31500000,
+          "quantity": 2
+        },
+        {
+          "pid": "P0008",
+          "pName": "Tủ lạnh Darling",
+          "price": 7660000,
+          "quantity": 1
+        }
+      ],
+      "vat": "8%",
+      "total": "76.312.800 ₫"
+    },
+    {
+      "id": "a7c8",
+      "orderDate": "2024-04-24",
+      "requestDate": "2024-04-27",
+      "status": "Approved",
+      "customer": {
+        "firstName": "Nguyen",
+        "lastName": " Duc Huy",
+        "address": "FPT",
+        "phone": "1234567890",
+        "email": "user5@gmail.com"
+      },
+      "product": [
+        {
+          "pid": "P0003",
+          "pName": "Iphone 15 plus 128GB",
+          "price": 24000000,
+          "quantity": 1
+        },
+        {
+          "pid": "P0004",
+          "pName": "Iphone 12 128GB",
+          "price": 15000000,
+          "quantity": 1
+        }
+      ],
+      "vat": "8%",
+      "total": "42.120.000 ₫"
+    },
+    {
+      "id": "8759",
+      "orderDate": "2024-04-25",
+      "requestDate": "2024-06-29",
+      "status": "Approved",
+      "customer": {
+        "firstName": "Quỳnh Anh ",
+        "lastName": "Nè",
+        "address": "Nhà ở khắp mọi nơi",
+        "phone": "0912126990",
+        "email": "AnhDTQ@gmail.com.vn"
+      },
+      "product": [
+        {
+          "pid": "P0003",
+          "pName": "Iphone 15 plus 128GB",
+          "price": 24000000,
+          "quantity": 2
+        },
+        {
+          "pid": "P0002",
+          "pName": "Tivi Sony (55inch)",
+          "price": 10000000,
+          "quantity": 1
+        }
+      ],
+      "vat": "8%",
+      "total": "62.640.000 ₫"
+    },
+    {
+      "id": "515c",
+      "orderDate": "2024-11-06",
+      "requestDate": "2024-12-14",
+      "status": "Archived",
+      "customer": {
+        "firstName": "Hoàng",
+        "lastName": "Gia Huấn",
+        "address": "Phú Lộc, Lạng Sơn, Việt Nam",
+        "phone": "0977338618",
+        "email": "huanhoahong@gmail.com.vn"
+      },
+      "product": [
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD tích hợp AI giọng nói",
+          "price": 20000000,
+          "quantity": 2
+        },
+        {
+          "pid": "P0002",
+          "pName": "Smart Tivi Sony 4kHD (80 inch)",
+          "price": 10000000,
+          "quantity": 2
+        },
+        {
+          "pid": "P0003",
+          "pName": "Iphone 15 plus 128GB",
+          "price": 24000000,
+          "quantity": 2
+        },
+        {
+          "pid": "P0004",
+          "pName": "Iphone 12 plus 128GB",
+          "price": 15000000,
+          "quantity": 3
+        },
+        {
+          "pid": "P0008",
+          "pName": "Tủ lạnh Darling 150cm",
+          "price": 7660000,
+          "quantity": 2
+        }
+      ],
+      "vat": "8%",
+      "total": "181.785.600 ₫"
+    }
+  ],
+  "orderDetailsLogged": [
+    {
+      "id": "b1f4",
+      "accountId": "3",
+      "fullName": "HuyFaker",
+      "address": "Đại học fpt Hà Nội",
+      "phone": "0912202885",
+      "email": "huyndhe176876@fpt.edu.vn",
+      "product": [
+        {
+          "pid": "P0042",
+          "pName": "Loa bluetooth GooDoo",
+          "price": 5403000,
+          "quantity": 1,
+          "image": "/assets/images/product42.png"
+        },
+        {
+          "pid": "P0043",
+          "pName": "Loa bluetooth Amazon",
+          "price": 5364145,
+          "quantity": 1,
+          "image": "/assets/images/product43.png"
+        },
+        {
+          "pid": "P0044",
+          "pName": "Loa bluetooth thông minh kèm trợ lý ảo",
+          "price": 59512444,
+          "quantity": 1,
+          "image": "/assets/images/product44.png"
+        },
+        {
+          "pid": "P0046",
+          "pName": "Máy rửa bát bán âm Richborn RDG6080SQB",
+          "price": 9251444,
+          "quantity": 1,
+          "image": "/assets/images/product46.png"
+        },
+        {
+          "pid": "P0045",
+          "pName": "Máy Giặt TOSHIBA 9.5Kg TW-BK105S3V (SK)",
+          "price": 6251444,
+          "quantity": 1,
+          "image": "/assets/images/product45.png"
+        },
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD tích hợp AI giọng nói",
+          "price": 20000000,
+          "quantity": 1,
+          "image": "/assets/images/product1.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "163.921.835 ₫",
+      "shipping": 0,
+      "status": "Approved",
+      "reqDate": "2024-12-24",
+      "orderAt": "2024-11-21"
+    },
+    {
+      "id": "c5de",
+      "accountId": "4",
+      "fullName": "Dương Thị Quỳnh Anh",
+      "address": "Thôn 3 thạch hoà, thạch thất, hà nội",
+      "phone": "0123123123",
+      "email": "AnhDTQ1304@fpt.edu.vn",
+      "product": [
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD - AI Voice",
+          "price": 20000000,
+          "quantity": 1,
+          "image": "/assets/images/product1.png"
+        },
+        {
+          "pid": "P0056",
+          "pName": "iPhone 16",
+          "price": 29000000,
+          "quantity": 1,
+          "image": "/assets/images/product56.png"
+        },
+        {
+          "pid": "P0059",
+          "pName": "iPhone 16 Promax",
+          "price": 35000000,
+          "quantity": 1,
+          "image": "/assets/images/product59.png"
+        },
+        {
+          "pid": "P0007",
+          "pName": "iPad Pro M2 11 inch WiFi Cellular 128GB",
+          "price": 31500000,
+          "quantity": 1,
+          "image": "/assets/images/product7.png"
+        },
+        {
+          "pid": "P0012",
+          "pName": "Laptop Gaming ACER Nitro 51140P",
+          "price": 35380000,
+          "quantity": 1,
+          "image": "/assets/images/product12.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "152.195.674 ₫",
+      "shipping": 0,
+      "status": "Archived",
+      "orderAt": "2024-11-25",
+      "reqDate": "2024-11-30"
+    },
+    {
+      "id": "33c5",
+      "accountId": "2",
+      "fullName": "USER4 Nè",
+      "address": "FPT HÀ NỘI, VIệt NAM",
+      "phone": "1231231231",
+      "email": "user4here@gmail.com",
+      "product": [
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD - AI Voice",
+          "price": 20000000,
+          "quantity": 2,
+          "image": "/assets/images/product1.png"
+        },
+        {
+          "pid": "P0002",
+          "pName": "Smart Tivi Sony 4kHD",
+          "price": 10000000,
+          "quantity": 2,
+          "image": "/assets/images/product2.png"
+        },
+        {
+          "pid": "P0050",
+          "pName": "Samsung Neo QLED",
+          "price": 11520000,
+          "quantity": 1,
+          "image": "/assets/images/product50.png"
+        },
+        {
+          "pid": "P0051",
+          "pName": "Panasonic JZ2000 OLED",
+          "price": 11000000,
+          "quantity": 1,
+          "image": "/assets/images/product51.png"
+        },
+        {
+          "pid": "P0052",
+          "pName": "Xiaomi Mi TV Q1",
+          "price": 12000000,
+          "quantity": 1,
+          "image": "/assets/images/product52.png"
+        },
+        {
+          "pid": "P0053",
+          "pName": "TCL QLED 6-Series",
+          "price": 13000000,
+          "quantity": 1,
+          "image": "/assets/images/product53.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "108.457.574 ₫",
+      "shipping": 0,
+      "status": "Rejected",
+      "orderAt": "2024-11-25",
+      "reqDate": "2024-11-30"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "R1",
+      "productId": "P0009",
+      "userId": "3",
+      "rating": 5,
+      "review": "Sản phẩm oke nhưng mà hơi đắt",
+      "date": "28/11/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "iPhone 16",
+      "helpfulCount": 20
+    },
+    {
+      "id": "R2",
+      "productId": "P0009",
+      "userId": "3",
+      "rating": 5,
+      "review": "Đã mua cái máy thứ 2 và thấy nó vẫn đắt",
+      "date": "28/11/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "iPhone 16",
+      "helpfulCount": 6
+    },
+    {
+      "id": "R3",
+      "productId": "P0009",
+      "userId": "3",
+      "rating": 5,
+      "review": "Mua cái thứ 3 rồi",
+      "date": "28/11/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "iPhone 16",
+      "helpfulCount": 6
+    },
+    {
+      "id": "R4",
+      "productId": "P0009",
+      "userId": "3",
+      "rating": 1,
+      "review": "đánh giá này để nhận 200 xu thôi",
+      "date": "28/11/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "iPhone 16",
+      "helpfulCount": 6
+    },
+    {
+      "id": "R5",
+      "productId": "P0009",
+      "userId": "3",
+      "rating": 4,
+      "review": "đánh giá 1 sao để cho dễ đọc nhé",
+      "date": "28/11/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "iPhone 16",
+      "helpfulCount": 5
+    }
+  ]
+}

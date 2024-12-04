@@ -1,0 +1,624 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/* Footer */
+.footer {
+  background-color: lightgray;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer h3 {
+  color: black;
+}
+
+.footer p {
+  color: black;
+}
+
+.footer .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.social-icons li i {
+  margin-right: 5px;
+}
+
+.footer .social-icons li:last-child {
+  margin-right: 0;
+}
+
+.col-about {
+  margin: 12px 12px;
+}
+
+.copy-right {
+  background-color: lightgrey;
+}
+
+/* Change Password */
+.container-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.form-container {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ddddf8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  color: #da4e22;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-strength {
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.weak {
+  color: red;
+}
+
+.medium {
+  color: orange;
+}
+
+.strong {
+  color: green;
+}
+
+.error-message {
+  color: #da4e22;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-password-button {
+  background-color: #da4e22;
+  color: #fff;
+}
+
+.back-to-shop-button {
+  background-color: #da4e22;
+  color: #fff;
+}
+
+/* End */
+
+/* Product Detail*/
+
+.product-detail {
+  padding: 50px 0;
+}
+
+.product-detail .product-detail-info {
+  background-color: #d9d7d7;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.product-detail .product-detail-title {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.product-detail-mall {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: cursive;
+}
+
+.Button-add-detail {
+  border: 2px solid #f73c04;
+  border-radius: 10px;
+  padding: 12px;
+  width: 300px;
+  color: #f76801;
+  background-color: #f8ded6;
+}
+
+.Button-buynow-detail {
+  border: 2px solid #f73c04;
+  border-radius: 10px;
+  padding: 12px;
+  width: 300px;
+  color: white;
+  background-color: #c00f0f;
+}
+
+.Button-buynow-detail:hover {
+  border: 2px solid #d9f600;
+  background-color: #d9f600;
+  color: black;
+}
+
+.Button-add-detail:hover {
+  border: 2px solid #f46600;
+  background-color: #f46600;
+  color: white;
+}
+
+.product-detail .product-detail-item {
+  margin-bottom: 10px;
+}
+
+.product-detail .product-detail-item-deal {
+  padding: 3px 6px;
+  color: #ee4d2d;
+  border-radius: 5px;
+  background-color: var(--brand-primary-light-color, rgba(252, 61, 2, 0.1));
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.product-detail .product-detail-image {
+  height: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.product-detail .product-detail-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.similar-products-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.similar-product {
+  width: 100%;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.similar-product-link {
+  text-decoration: none;
+  color: #333;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.similar-product-image {
+  width: 70%;
+  height: 70%;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.similar-product-name {
+  font-size: 21px;
+}
+
+.product-review {
+  margin-bottom: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+.product-review-stars {
+  display: flex;
+  gap: 5px;
+}
+
+.product-review-user {
+  margin-top: 10px;
+  font-style: italic;
+  color: #000000;
+}
+
+.flash-sale-row {
+  background-color: rgb(241, 84, 27);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.flash-sale-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.flash-sale-timer {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  padding-right: -20px;
+}
+
+.flash-sale-timer-span {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+.countdown-timer {
+  display: flex;
+}
+
+.time-block {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+/* register */
+
+.register-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(2, 1, 0);
+}
+
+.register-image {
+  flex: 1;
+  min-width: 400px;
+}
+
+.register-form {
+  flex: 1;
+  min-width: 600px;
+  background-color: #ffc0cb;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-image,
+  .register-form {
+    min-width: 100%;
+  }
+}
+
+.iconicon {
+  color: #fff;
+  background-color: #3b5998;
+  padding: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.iconicon:hover {
+  background-color: #cf3838;
+}
+
+.Search-icon-user {
+  border: 1px solid rgb(0, 191, 255);
+  border-radius: 9px;
+  background-color: rgb(0, 191, 255);
+  padding: 6px;
+}
+
+.button-change-infor {
+  color: white;
+  text-decoration: none;
+  padding: 3px;
+  border: 1px solid #f86338;
+  background-color: #f86338;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-change-infor:hover {
+  background-color: #e68c6c;
+  color: #000000;
+}
+
+.button-select-voucher {
+  color: white;
+  text-decoration: none;
+  text-align: end;
+  border: 1px solid #f86338;
+  background-color: #f86338;
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-select-voucher:hover {
+  background-color: #e68c6c;
+  color: #000000;
+}
+
+/* Trang tố cáo sản phẩm */
+/* src/styles.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-product-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-product-modal h1 {
+  text-align: center;
+}
+
+.wrap.fadescaled-enter-done {
+  list-style: none;
+  padding: 0;
+}
+
+.wrap.fadescaled-enter-done li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #218838;
+}
+
+.button-close-report {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background: #029ee7;
+  color: white;
+  cursor: pointer;
+}
+
+.button-close-report:hover {
+  background: #218838;
+}
+
+/* src/components/styles.css */
+.shop-info-row {
+  background-color: #f8f9fa; /* Màu nền nhẹ nhàng */
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  border-right: 2px solid #000;
+}
+
+.shop-avatar {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+
+.shop-details {
+  flex-grow: 1;
+}
+
+.shop-status {
+  font-size: 0.875rem;
+  color: #28a745; /* Màu xanh để thể hiện trạng thái online */
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.status-indicator.online {
+  background-color: #28a745; /* Màu xanh để thể hiện trạng thái online */
+}
+
+.shop-stat {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.shop-stat h6 {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.shop-stat p {
+  font-size: 1rem;
+  color: #ea3903;
+}
+
+.chat-now {
+  margin-right: 5px;
+  border: 1px solid #f73c04;
+  border-radius: 2px;
+  padding: 5px;
+  color: #f76801;
+  background-color: #f8ded6;
+}
+.chat-now:hover {
+  background-color: #c00f0f;
+  color: white;
+}
+
+.view-shop {
+  margin-right: 5px;
+  border: 1px solid #791bab;
+  border-radius: 2px;
+  padding: 5px;
+  color: white;
+  background-color: #791bab;
+}
+.view-shop:hover {
+  background-color: #029ee7;
+  color: #000000;
+}
+/*Navigation trong ProductUser*/
+/* Thanh navigation mặc định */
+.navbar {
+  background-color: rgb(13, 110, 253);
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Thanh navigation khi dính */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hiệu ứng chuyển động cho AccessDenied */
+@keyframes top-to-center {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-to-center {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-to-center {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.w3-animate-top {
+  animation: top-to-center 0.6s ease-in-out;
+}
+
+.w3-animate-left {
+  animation: left-to-center 0.6s ease-in-out;
+}
+
+.w3-animate-right {
+  animation: right-to-center 0.6s ease-in-out;
+}
+/* Hết hiệu ứng AccessDenied - Keyframes */
