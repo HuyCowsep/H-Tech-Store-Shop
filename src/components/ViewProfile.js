@@ -81,7 +81,7 @@ function ViewProfile() {
               <FontAwesomeIcon icon={faKey} style={{ marginRight: "15px", fontSize: "20px", color: "#2ecc71" }} />
               <p style={{ fontSize: "20px", fontWeight: "bold", margin: "0", color: "#555" }}>
                 Mật khẩu:{" "}
-                <span style={{ color: "#333", display: "inline-flex", alignItems: "center" }}>
+                <span style={{ color: "#333", display: "inline-flex", alignItems: "center", maxWidth: "250px", overflow: "hidden", whiteSpace: "nowrap" }}>
                   <input
                     type={passwordVisible ? "text" : "password"}
                     value={user.password}
@@ -91,7 +91,9 @@ function ViewProfile() {
                       backgroundColor: "transparent",
                       fontSize: "20px",
                       color: "#333",
-                      marginRight: "5px",
+                      marginRight: "20px", // Optional: Adjust spacing between input and icon
+                      width: "100%", // Ensure input fills the available space
+                      overflowX: "auto", // Allow horizontal scrolling for long passwords
                     }}
                   />
                   <FontAwesomeIcon

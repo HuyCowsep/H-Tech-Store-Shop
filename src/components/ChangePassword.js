@@ -28,6 +28,7 @@ function ChangePassword() {
         throw new Error("Không thể thay đổi mật khẩu");
       }
       alert("Mật khẩu của bạn đã được thay đổi thành công! Bạn cần đăng nhập lại");
+      localStorage.removeItem("accounts");
       navigate("/auth/login");
     } catch (error) {
       setErrorMessage("Có lỗi xảy ra khi thay đổi mật khẩu. Vui lòng thử lại sau.");
@@ -36,7 +37,9 @@ function ChangePassword() {
 
   const handleNewPasswordChange = (newPassword) => {
     setNewPassword(newPassword);
-    if (/^[0-9]+$/.test(newPassword) || /^[a-zA-Z]+$/.test(newPassword)) {
+    if (newPassword === "") {
+      setPasswordStrength(""); // Không có thông báo về độ mạnh khi mật khẩu trống
+    } else if (/^[0-9]+$/.test(newPassword) || /^[a-zA-Z]+$/.test(newPassword)) {
       setPasswordStrength("Bảo mật yếu");
     } else if (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/.test(newPassword)) {
       setPasswordStrength("Bảo mật mạnh");
@@ -93,8 +96,25 @@ function ChangePassword() {
           <div className="form-group">
             <label>Nhập mật khẩu mới:</label>
             <input type="password" value={newPassword} onChange={(e) => handleNewPasswordChange(e.target.value)} required />
-            <span className={`password-strength ${passwordStrength.toLowerCase()}`}>{passwordStrength}</span>
+            <span
+              style={{
+                fontSize: "14px",
+                fontWeight: "bold",
+                marginTop: "5px",
+                color:
+                  passwordStrength === "Bảo mật yếu"
+                    ? "red"
+                    : passwordStrength === "Bảo mật trung bình"
+                    ? "orange"
+                    : passwordStrength === "Bảo mật mạnh"
+                    ? "green"
+                    : "black",
+              }}
+            >
+              {passwordStrength}
+            </span>
           </div>
+
           <div className="form-group">
             <label>Xác nhận lại mật khẩu mới:</label>
             <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />

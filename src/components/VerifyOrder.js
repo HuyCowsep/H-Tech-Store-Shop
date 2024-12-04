@@ -137,15 +137,30 @@ function VerifyOrder() {
   };
 
   const handleQuantityChange = (id, change) => {
+    const itemToUpdate = cart.find((item) => item.id === id);
+    if (!itemToUpdate) {
+      return;
+    }
+    const updatedQuantity = itemToUpdate.quantity + change;
+    if (updatedQuantity === 0) {
+      const confirmInfo = window.confirm(`Bạn muốn loại bỏ hẳn sản phẩm "${itemToUpdate.name}" khỏi Giỏ Hàng ?`);
+      if (!confirmInfo) {
+        return;
+      }
+    }
+    if (itemToUpdate.quantity === 1 && updatedQuantity === 2) {
+      //không xử lý nếu tăng từ 1 lên
+    }
     const updatedCart = cart
       .map((item) => {
         if (item.id === id) {
-          return { ...item, quantity: item.quantity + change };
+          return { ...item, quantity: updatedQuantity };
         }
         return item;
       })
-      .filter((item) => item.quantity > 0); // Loại bỏ các sản phẩm có số lượng <= 0
+      .filter((item) => item.quantity > 0);
     setCart(updatedCart);
+    //tính lại số lượng mặt hàng trong giỏ khi có sản phẩm nào đó bị loại về 0, quantity không liên quan đến cartCount
     const remainingItemsCount = updatedCart.length;
     localStorage.setItem("cartCount", remainingItemsCount.toString());
   };
@@ -180,8 +195,7 @@ function VerifyOrder() {
               </Col>
             </Row>
             <p style={{ color: "red", textAlign: "center", fontWeight: "bold" }}>
-              (Vì bạn không có tài khoản nên chúng tôi cần thực hiện các bước xác minh để chắc chắn rằng bạn có thể nhận được sản phẩm khi mua tại Cửa
-              Hàng của chúng tôi)
+              (Vì bạn không có tài khoản nên chúng tôi cần thực hiện các bước xác minh để chắc chắn rằng bạn có thể nhận được sản phẩm khi mua tại Cửa Hàng của chúng tôi)
             </p>
             <Table hover striped bordered>
               <thead>
@@ -249,23 +263,13 @@ function VerifyOrder() {
                 <Form.Group as={Col} sm={6}>
                   <Form.Label>Họ(*)</Form.Label>
                   <Col sm={9}>
-                    <Form.Control
-                      type="text"
-                      name="firstName"
-                      defaultValue={user ? user.firstName : ""}
-                      onChange={(e) => setFirstName(e.target.value)}
-                    />
+                    <Form.Control type="text" name="firstName" defaultValue={user ? user.firstName : ""} onChange={(e) => setFirstName(e.target.value)} />
                   </Col>
                 </Form.Group>
                 <Form.Group as={Col} sm={6}>
                   <Form.Label>Tên(*)</Form.Label>
                   <Col sm={9}>
-                    <Form.Control
-                      name="lastName"
-                      defaultValue={user ? user.lastName : ""}
-                      type="text"
-                      onChange={(e) => setLastName(e.target.value)}
-                    />
+                    <Form.Control name="lastName" defaultValue={user ? user.lastName : ""} type="text" onChange={(e) => setLastName(e.target.value)} />
                   </Col>
                 </Form.Group>
               </Row>
@@ -299,13 +303,7 @@ function VerifyOrder() {
                 <Form.Group as={Col} sm={6}>
                   <Form.Label>Ngày yêu cầu nhận hàng(*)</Form.Label>
                   <Col sm={9}>
-                    <Form.Control
-                      name="requestDate"
-                      type="date"
-                      min={orderDate}
-                      defaultValue={requestDate}
-                      onChange={(e) => setRequestDate(e.target.value)}
-                    />
+                    <Form.Control name="requestDate" type="date" min={orderDate} defaultValue={requestDate} onChange={(e) => setRequestDate(e.target.value)} />
                   </Col>
                 </Form.Group>
               </Row>
@@ -313,16 +311,12 @@ function VerifyOrder() {
                 <Col>
                   <div>
                     <span>
-                      <Button
-                        type="submit"
-                        style={{ borderColor: "orange", backgroundColor: "orange", color: "white", marginBottom: "5px", marginLeft: "-4px" }}
-                      >
+                      <Button type="submit" style={{ borderColor: "orange", backgroundColor: "orange", color: "white", marginBottom: "5px", marginLeft: "-4px" }}>
                         Thanh Toán Ngay
                       </Button>
                     </span>{" "}
                     <span style={{ color: "red", paddingBottom: "20px" }}>
-                      Nhấn "Thanh Toán" đồng nghĩa với việc bạn đã đồng ý với các thông tin của mình là chính xác. Có thể bạn sẽ muốn kiểm tra lại
-                      Email.
+                      Nhấn "Thanh Toán" đồng nghĩa với việc bạn đã đồng ý với các thông tin của mình là chính xác. Có thể bạn sẽ muốn kiểm tra lại Email.
                       <Link to={"/auth/login"} style={{ textDecoration: "none" }}>
                         {" "}
                         "Đăng nhập"{" "}

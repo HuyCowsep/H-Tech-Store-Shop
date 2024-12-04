@@ -199,9 +199,7 @@ function Cart() {
       orderAt: formattedCurrentDate,
       reqDate: requestDate,
     };
-    const confirmInfo = window.confirm(
-      `Bạn có muốn kiểm tra lại thông tin vận chuyển lần nữa không? Nếu "CÓ" thì nhấn "Cancel" để đóng thông báo này!`
-    );
+    const confirmInfo = window.confirm(`Bạn có muốn kiểm tra lại thông tin vận chuyển lần nữa không? Nếu "CÓ" thì nhấn "Cancel" để đóng thông báo này!`);
     if (!confirmInfo) {
       return false;
     }
@@ -511,26 +509,13 @@ function Cart() {
 
               <Form.Group className="mb-3" controlId="formBasicAddress">
                 <Form.Label>Địa chỉ</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  rows={3}
-                  placeholder="Nhập địa chỉ của bạn"
-                  value={address}
-                  onChange={(e) => setAddress(e.target.value)}
-                  required
-                />
+                <Form.Control as="textarea" rows={3} placeholder="Nhập địa chỉ của bạn" value={address} onChange={(e) => setAddress(e.target.value)} required />
                 <Form.Control.Feedback type="invalid">Vui lòng nhập địa chỉ hợp lệ.</Form.Control.Feedback>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPhone">
                 <Form.Label>Số điện thoại</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Nhập số điện thoại của bạn"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
+                <Form.Control type="text" placeholder="Nhập số điện thoại của bạn" value={phone} onChange={(e) => setPhone(e.target.value)} required />
                 <Form.Control.Feedback type="invalid">Vui lòng nhập số điện thoại hợp lệ.</Form.Control.Feedback>
               </Form.Group>
 
