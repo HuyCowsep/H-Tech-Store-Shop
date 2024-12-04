@@ -132,7 +132,7 @@ function App() {
               }
             />
             <Route
-              path="/product/:id/edit"
+              path="/product/edit/:id"
               element={
                 <>
                   <Header isLogin={isLogin} setIsLogin={setIsLogin} />

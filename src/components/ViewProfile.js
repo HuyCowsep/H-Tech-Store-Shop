@@ -16,7 +16,7 @@ function ViewProfile() {
       const loggedInUser = accounts[0];
 
       if (loggedInUser) {
-        setLoggedInUserId(loggedInUser.id); // Lưu id của người dùng vào state
+        setLoggedInUserId(loggedInUser.id);
 
         fetch(`http://localhost:9999/accounts/${loggedInUser.id}`)
           .then((response) => response.json())

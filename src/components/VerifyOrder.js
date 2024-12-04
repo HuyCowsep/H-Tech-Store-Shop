@@ -98,7 +98,10 @@ function VerifyOrder() {
         quantity: item.quantity,
       })),
       vat: "8%",
-      total: calculateTotal(),
+      total: calculateTotal().toLocaleString("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      }),
     };
     fetch("http://localhost:9999/orderDetailsNoLogin", {
       method: "POST",

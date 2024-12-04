@@ -104,6 +104,7 @@ export default function ProductAdmin() {
   return (
     <Container>
       <Row className="mt-4">
+        <h1 style={{ textAlign: "center", marginBottom: "30px", fontFamily: "cursive" }}>Danh sách các Sản Phẩm</h1>
         <Col
           xs={12}
           sm={3}
@@ -205,7 +206,7 @@ export default function ProductAdmin() {
                       </td>
                       <td>
                         <Button variant="primary" className="me-2">
-                          <Link style={{ color: "white", textDecoration: "none" }} to={`/product/${p.id}/edit`}>
+                          <Link style={{ color: "white", textDecoration: "none" }} to={`/product/edit/${p.id}`}>
                             <EditIcon /> Sửa
                           </Link>
                         </Button>

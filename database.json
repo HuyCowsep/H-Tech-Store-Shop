@@ -689,7 +689,7 @@
       "id": "3",
       "name": "Nguyễn Đức Huy",
       "email": "huyndhe176876@fpt.edu.vn",
-      "password": "123123",
+      "password": "123456",
       "dob": "2003-03-31",
       "gender": "nam",
       "role": "user",
@@ -697,52 +697,53 @@
     },
     {
       "id": "4",
-      "name": "Dương Thị Quỳnh Anh",
-      "email": "anhxinhgai@gmail.com",
+      "name": "JohnMAthem",
+      "email": "john@gmail.com",
       "password": "123456",
-      "dob": "2004-05-29",
+      "dob": "2014-11-28",
+      "gender": "nữ",
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": "5",
+      "name": "Tester5555",
+      "email": "a@gmai.com",
+      "password": "123123",
+      "dob": "2002-12-12",
+      "gender": "nam",
+      "role": "user",
+      "isActive": false
+    },
+    {
+      "id": "6",
+      "name": "quynh Anh",
+      "email": "anhxinhgai@gmail.com",
+      "password": "123123",
+      "dob": "1111-11-11",
       "gender": "nữ",
       "role": "user",
       "isActive": true
     },
     {
-      "id": "41",
-      "name": "JohnMAthem",
-      "email": "john@gmail.com",
-      "password": "123456",
-      "dob": "2014-11-28",
-      "gender": "female",
+      "id": "7",
+      "name": "TestGender LGBT",
+      "email": "12@gmail.com",
+      "password": "123123",
+      "dob": "1111-11-11",
+      "gender": "LGBT",
       "role": "user",
       "isActive": true
     },
     {
-      "id": "411",
-      "name": "Tester5555",
-      "email": "a@gmai.com",
+      "id": "8",
+      "name": "Admin_2_Huy",
+      "email": "admin2@gmail.com",
       "password": "123123",
-      "dob": "2002-12-12",
-      "gender": "male",
-      "role": "user",
-      "isActive": false
-    },
-    {
-      "id": "4111",
-      "name": "Alo ALo",
-      "email": "b@gmail.com",
-      "password": "123123",
-      "dob": "2004-11-28",
-      "gender": "female",
-      "role": "user",
-      "isActive": false
-    },
-    {
-      "id": "41111",
-      "name": "Nông Văn Mạnh",
-      "email": "manh@gmail.com",
-      "password": "123123",
-      "dob": "2003-11-11",
-      "gender": "male",
-      "role": "user"
+      "dob": "2003-03-31",
+      "gender": "Nam",
+      "role": "admin",
+      "isActive": true
     }
   ],
   "orderDetailsNoLogin": [
@@ -808,7 +809,7 @@
       "id": "8759",
       "orderDate": "2024-04-25",
       "requestDate": "2024-06-29",
-      "status": "Approved",
+      "status": "Archived",
       "customer": {
         "firstName": "Quỳnh Anh ",
         "lastName": "Nè",
@@ -879,6 +880,58 @@
       ],
       "vat": "8%",
       "total": "181.785.600 ₫"
+    },
+    {
+      "id": "9710",
+      "orderDate": "2024-12-04",
+      "requestDate": "2024-12-31",
+      "status": "Approved",
+      "customer": {
+        "firstName": "Test",
+        "lastName": "No Login",
+        "address": "Hà Nội - Thạch Thất - Việt Nam",
+        "phone": "0977338618",
+        "email": "testnologin@gmail.com"
+      },
+      "product": [
+        {
+          "pid": "P0017",
+          "pName": "iPad Pro M2 11 inch WiFi Cellular 128GB",
+          "price": 31500000,
+          "quantity": 1
+        },
+        {
+          "pid": "P0037",
+          "pName": "Ipad Gen I10",
+          "price": 11000000,
+          "quantity": 1
+        }
+      ],
+      "vat": "8%",
+      "total": "45.900.000 ₫"
+    },
+    {
+      "id": "069d",
+      "orderDate": "2024-12-04",
+      "requestDate": "2024-12-06",
+      "status": "Approved",
+      "customer": {
+        "firstName": "Michale",
+        "lastName": "Van Ngu",
+        "address": "gngnngn ngngng ngngn",
+        "phone": "0912202885",
+        "email": "user4aa@gmail.com"
+      },
+      "product": [
+        {
+          "pid": "P0003",
+          "pName": "Samsung Neo QLED",
+          "price": 11520000,
+          "quantity": 1
+        }
+      ],
+      "vat": "8%",
+      "total": "12.441.600 ₫"
     }
   ],
   "orderDetailsLogged": [
@@ -942,7 +995,7 @@
     },
     {
       "id": "c5de",
-      "accountId": "4",
+      "accountId": null,
       "fullName": "Dương Thị Quỳnh Anh",
       "address": "Thôn 3 thạch hoà, thạch thất, hà nội",
       "phone": "0123123123",
@@ -1048,6 +1101,66 @@
       "status": "Rejected",
       "orderAt": "2024-11-25",
       "reqDate": "2024-11-30"
+    },
+    {
+      "id": "9fd6",
+      "accountId": "3",
+      "fullName": "Huy Huy HUY",
+      "address": "vietnamvietnamvietnamvietnamvie",
+      "phone": "0123456789",
+      "email": "huyndhe176876@fpt.edu.vn",
+      "product": [
+        {
+          "pid": "P0003",
+          "pName": "Samsung Neo QLED",
+          "price": 11520000,
+          "quantity": 2,
+          "image": "/assets/images/product50.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "23.240.909 ₫",
+      "shipping": 0,
+      "status": "Approved",
+      "orderAt": "2024-12-04",
+      "reqDate": "2024-12-31"
+    },
+    {
+      "id": "325c",
+      "accountId": "7",
+      "fullName": "Test Logged Account",
+      "address": "Châu Á Hà Nội Việt Nam",
+      "phone": "0999999992",
+      "email": "12@gmail.com",
+      "product": [
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD - AI Voice",
+          "price": 20000000,
+          "quantity": 1,
+          "image": "/assets/images/product1.png"
+        },
+        {
+          "pid": "P0002",
+          "pName": "Smart Tivi Sony 4kHD",
+          "price": 10000000,
+          "quantity": 2,
+          "image": "/assets/images/product2.png"
+        },
+        {
+          "pid": "P0003",
+          "pName": "Samsung Neo QLED",
+          "price": 11520000,
+          "quantity": 1,
+          "image": "/assets/images/product50.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "51.969.254 ₫",
+      "shipping": 0,
+      "status": "Approved",
+      "orderAt": "2024-12-04",
+      "reqDate": "2024-12-13"
     }
   ],
   "reviews": [

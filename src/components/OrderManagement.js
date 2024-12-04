@@ -38,7 +38,6 @@ const OrderManagement = () => {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Đơn hàng đã được duyệt thành công!");
           if (isNoLogin) {
             setNoLoginOrders((prev) => prev.map((order) => (order.id === orderId ? { ...order, status: "Approved" } : order)));
           } else {
@@ -65,7 +64,6 @@ const OrderManagement = () => {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Đơn hàng đã bị từ chối!");
           if (isNoLogin) {
             setNoLoginOrders((prev) => prev.map((order) => (order.id === orderId ? { ...order, status: "Rejected" } : order)));
           } else {
@@ -81,11 +79,8 @@ const OrderManagement = () => {
       });
   };
   //Lọc các đơn đã có status là archived
-  const archivedOrders = [
-    ...loggedOrders.filter((order) => order.status === "Archived"),
-    ...noLoginOrders.filter((order) => order.status === "Archived"),
-  ];
-
+  const archivedOrders = [...loggedOrders.filter((order) => order.status === "Archived"), ...noLoginOrders.filter((order) => order.status === "Archived")];
+  //Hàm xử lý các đơn hàng đã lưu trữ, tức là đã vận chuyển thành công
   const handleArchiveOrder = (orderId, isNoLogin = false) => {
     const confirmArchive = window.confirm(`Bạn có chắc chắn muốn lưu trữ đơn hàng "${orderId}"?`);
     if (!confirmArchive) return;
@@ -100,7 +95,6 @@ const OrderManagement = () => {
     })
       .then((response) => {
         if (response.ok) {
-          alert("Đơn hàng đã được lưu trữ.");
           // Cập nhật trạng thái và loại bỏ đơn hàng đã lưu trữ khỏi danh sách
           if (isNoLogin) {
             setNoLoginOrders((prev) => prev.filter((order) => order.id !== orderId));
@@ -218,6 +212,7 @@ const OrderManagement = () => {
           {renderTable(noLoginOrders, true)}
         </>
       )}
+
       {/* Modal cho các đơn hàng đã hoàn thành */}
       <Modal show={showCompletedOrders} onHide={handleCloseCompletedOrders} size="lg" centered>
         <Modal.Header closeButton>

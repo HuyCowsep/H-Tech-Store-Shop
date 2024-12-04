@@ -75,6 +75,23 @@ export default function UserManagement() {
       .finally(() => setLoading(false));
   };
 
+  const handleRemoveAccount = async (accountId) => {
+    try {
+      // Gửi yêu cầu xóa tài khoản từ API
+      const response = await fetch(`http://localhost:9999/accounts/${accountId}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Không thể xóa tài khoản.");
+      }
+      setUsers((prevUsers) => prevUsers.filter((user) => user.id !== accountId));
+    } catch (error) {
+      console.error("Lỗi khi xóa tài khoản:", error);
+      alert("Có lỗi xảy ra khi xóa tài khoản. Vui lòng thử lại sau.");
+    }
+  };
+
   //Phân quyền các role User k đc vào các trang của admin
   const accounts = JSON.parse(localStorage.getItem("accounts")); // Lấy danh sách tài khoản từ localStorage
   const currentAccount = accounts?.find((account) => account.role === "admin" && account.isActive === true);
@@ -144,7 +161,7 @@ export default function UserManagement() {
                 <th>Email</th>
                 <th>Vai trò</th>
                 <th>Trạng thái</th>
-                <th>Thao tác</th>
+                <th colSpan={2}>Thao tác</th>
               </tr>
             </thead>
             <tbody>
@@ -195,6 +212,20 @@ export default function UserManagement() {
                       }
                     >
                       {user.isActive ? "Vô hiệu hóa" : "Kích hoạt"}
+                    </Button>
+                  </td>
+                  <td>
+                    <Button
+                      variant="warning"
+                      onClick={() =>
+                        handleShowModal({
+                          title: "Xoá vĩnh viễn tài khoản khỏi danh sách",
+                          message: `Bạn có chắc muốn xoá vĩnh viễn tài khoản của "${user.name}" ?`,
+                          action: () => handleRemoveAccount(user.id),
+                        })
+                      }
+                    >
+                      Xoá
                     </Button>
                   </td>
                 </tr>

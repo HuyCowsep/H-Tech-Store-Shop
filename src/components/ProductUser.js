@@ -37,9 +37,7 @@ export default function ProductUser({ isLogin }) {
       .then((result) => {
         let searchResult = [];
         if (catID === 0) {
-          searchResult = result.filter(
-            (p) => p.name.toLowerCase().includes(search.toLowerCase()) || p.descreption.toLowerCase().includes(search.toLowerCase())
-          );
+          searchResult = result.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()) || p.descreption.toLowerCase().includes(search.toLowerCase()));
         } else {
           // eslint-disable-next-line eqeqeq
           searchResult = result.filter((p) => p.catID == catID && p.name.toLowerCase().includes(search.toLowerCase()));
@@ -125,7 +123,7 @@ export default function ProductUser({ isLogin }) {
             onClick={() => {
               setCurrentPage(i);
               window.scrollTo({
-                top: 520, //Về đầu trang nhưng cách đỉnh 520px để không hiện 1 phần có carousel
+                top: 450, //Về đầu trang nhưng cách đỉnh 520px để không hiện 1 phần có carousel
                 behavior: "smooth",
               });
             }}
@@ -397,9 +395,7 @@ export default function ProductUser({ isLogin }) {
       {/* Thanh điều hướng sản phẩm, giới thiệu, liên hệ*/}
       <Row>
         <Navbar bg="secondary" expand="lg" className={`navbar ${isSticky ? "sticky" : ""}`} id="navbar">
-          <Navbar.Brand
-            style={{ border: "1px solid yellow", marginLeft: "30px", padding: "5px 10px", borderRadius: "10px", backgroundColor: "yellow" }}
-          >
+          <Navbar.Brand style={{ border: "1px solid yellow", marginLeft: "30px", padding: "5px 10px", borderRadius: "10px", backgroundColor: "yellow" }}>
             Trang chủ
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation" style={{ backgroundColor: "white" }} />
@@ -516,11 +512,7 @@ export default function ProductUser({ isLogin }) {
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" style={{ width: "100%" }} />
                   </Col>
                   <Col xs={4}>
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
-                      alt="Mastercard"
-                      style={{ width: "100%" }}
-                    />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard" style={{ width: "100%" }} />
                   </Col>
                   <Col xs={4}>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Paypal" style={{ width: "100%" }} />
@@ -636,9 +628,7 @@ export default function ProductUser({ isLogin }) {
                       </Link>
                     </Card.Title>
                     <Card.Text style={{ color: "red", fontWeight: "bold" }}>
-                      <span style={{ marginRight: "9px", marginLeft: "2px" }}>
-                        {p.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}
-                      </span>
+                      <span style={{ marginRight: "9px", marginLeft: "2px" }}>{p.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</span>
                       <span style={{ textDecoration: "line-through", color: "gray", marginRight: "3px" }}>
                         &nbsp;
                         {((p.price * 100) / 87).toLocaleString("vi-VN", { style: "currency", currency: "VND" })}

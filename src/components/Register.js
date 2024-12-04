@@ -62,20 +62,25 @@ export default function Register() {
       alert(errors.join("\n"));
       return;
     }
+    // Hàm xử lý tạo ID mới cho các register
+    const maxId = accounts.reduce((max, account) => {
+      // Chuyển id từ chuỗi thành số và tìm giá trị lớn nhất
+      return Math.max(max, parseInt(account.id, 10));
+    }, 0);
 
-    const maxId = accounts.reduce((max, account) => (account.id > max ? account.id : max), 0);
-    const newId = maxId + 1;
+    const newId = (maxId + 1).toString(); // Tăng id lên và chuyển thành chuỗi
 
     const isAdmin = /^admin\d*@gmail\.com$/.test(email);
 
     const newAccount = {
-      id: newId,
+      id: newId, // Lưu id dưới dạng chuỗi
       name: name,
       email: email,
       password: password,
       dob: dob,
-      gender: gender,
+      gender: gender === "male" ? "Nam" : gender === "female" ? "Nữ" : "LGBT",
       role: isAdmin ? "admin" : "user",
+      isActive: true,
     };
     setAccounts([newAccount, ...accounts]);
 

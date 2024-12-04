@@ -191,6 +191,10 @@ export default function ProductDetail({ isLogin }) {
       alert("Vui lòng đăng nhập để viết đánh giá!");
       return;
     }
+    if (currentAccount.role === "admin") {
+      alert("Admin không thể viết đánh giá!");
+      return;
+    }
 
     const newReviewData = {
       id: `R${reviews.length + 1}`,
@@ -541,7 +545,7 @@ export default function ProductDetail({ isLogin }) {
               </Col>
             ))
         ) : (
-          <p>Chưa có đánh giá nào cho sản phẩm này.</p>
+          <p style={{ textAlign: "center", fontFamily: "cursive", color: "red" }}>Chưa có đánh giá nào cho sản phẩm này.</p>
         )}
         <p style={{ textAlign: "center" }}>
           <Button onClick={handleShowMore}>{showMoreReviews ? "Ẩn bớt đánh giá" : "Xem Thêm Các Lượt Đánh Giá Khác"}</Button>
