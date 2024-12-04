@@ -92,7 +92,7 @@ function Header({ isLogin, setIsLogin }) {
                   <>
                     <Nav.Item justify-content-center>
                       <Nav.Link href="/productadmin" style={{ color: "white" }}>
-                        <Button className="bg-danger text-white px-4 py-2 border-0">Administrator</Button>
+                        <Button className="bg-danger text-white px-4 py-2 border-0">Giao diện Administrator</Button>
                       </Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="justify-content-center mt-2">

@@ -50,7 +50,7 @@ function ViewProfile() {
             <div style={{ marginBottom: "20px", display: "flex", alignItems: "center" }}>
               <FontAwesomeIcon icon={faUser} style={{ marginRight: "15px", fontSize: "20px", color: "#3498db" }} />
               <p style={{ fontSize: "20px", fontWeight: "bold", margin: "0", color: "#555" }}>
-                Tên Đăng Nhập: <span style={{ color: "#333" }}>{user.name}</span>
+                Tên Hiển Thị: <span style={{ color: "#333" }}>{user.name}</span>
               </p>
             </div>
             <div style={{ marginBottom: "20px", display: "flex", alignItems: "center" }}>
@@ -81,7 +81,7 @@ function ViewProfile() {
               <FontAwesomeIcon icon={faKey} style={{ marginRight: "15px", fontSize: "20px", color: "#2ecc71" }} />
               <p style={{ fontSize: "20px", fontWeight: "bold", margin: "0", color: "#555" }}>
                 Mật khẩu:{" "}
-                <span style={{ color: "#333" }}>
+                <span style={{ color: "#333", display: "inline-flex", alignItems: "center" }}>
                   <input
                     type={passwordVisible ? "text" : "password"}
                     value={user.password}
@@ -91,12 +91,13 @@ function ViewProfile() {
                       backgroundColor: "transparent",
                       fontSize: "20px",
                       color: "#333",
+                      marginRight: "5px",
                     }}
                   />
                   <FontAwesomeIcon
                     icon={passwordVisible ? faEyeSlash : faEye}
                     onClick={() => setPasswordVisible(!passwordVisible)}
-                    style={{ cursor: "pointer", marginLeft: "10px", color: "#3498db" }}
+                    style={{ cursor: "pointer", color: "#3498db" }}
                   />
                 </span>
               </p>
