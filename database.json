@@ -6,7 +6,7 @@
       "price": 20000000,
       "quantity": 20,
       "catID": "1",
-      "descreption": "Với công nghệ hiện đại như OLED và QLED, tivi LG mang đến trải nghiệm xem phim tuyệt vời",
+      "descreption": "Ti vi này rất là xịn, màn hình rộng, phù hợp với giá tiền cho mọi gia đình, hiệu ứng âm thanh đỉnh cao",
       "date": "2024-04-28",
       "status": "Còn hàng",
       "image": "/assets/images/product1.png"
@@ -1218,6 +1218,28 @@
       "userName": "Nguyễn Đức Huy",
       "productName": "iPhone 16",
       "helpfulCount": 5
+    },
+    {
+      "id": "R1",
+      "productId": "P0003",
+      "userId": "3",
+      "rating": 5,
+      "review": "huyhuy",
+      "date": "9/12/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "Samsung Neo QLED",
+      "helpfulCount": 0
+    },
+    {
+      "id": "R2",
+      "productId": "P0003",
+      "userId": "3",
+      "rating": 1,
+      "review": "huyhuy",
+      "date": "9/12/2024",
+      "userName": "Nguyễn Đức Huy",
+      "productName": "Samsung Neo QLED",
+      "helpfulCount": 0
     }
   ]
 }

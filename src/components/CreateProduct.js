@@ -5,7 +5,7 @@ import "./css/StyleAdmin.css";
 
 function CreateProduct(props) {
   const navigate = useNavigate();
-  const [error, setError] = useState({});
+  const [errors, setErrorsMessage] = useState({});
   const [product, setProduct] = useState([]);
   const [createAt, setCreateAt] = useState("");
   const [isAdmin, setIsAdmin] = useState(null);
@@ -41,57 +41,65 @@ function CreateProduct(props) {
     return <Navigate to="/accessdenied" />;
   }
 
+  // Lấy dữ liệu từ form
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    // kiểm tra xem các trường bắt buộc có được nhập đầy đủ hay không!
+    // Lấy giá trị các trường từ form
     const id = formData.get("productId");
     const name = formData.get("productName");
     const price = parseFloat(formData.get("productPrice"));
     const quantity = parseInt(formData.get("productQuantity"));
     const category = formData.get("productCategory");
-    const date = createAt;
+    const date = formData.get("productDate");
     const descreption = formData.get("productDescreption");
     const images = formData.get("productImageLink");
     const status = formData.get("productStatus");
-    // Xác thực các trường nhập vào
-    const errors = [];
 
-    if (id === "") {
-      errors.push("ID của sản phẩm không được bỏ trống");
+    const errorsMessage = {};
+
+    if (!id) {
+      errorsMessage.productId = "ID của sản phẩm không được bỏ trống";
     } else if (!id.match(/^P\d{4}$/)) {
-      errors.push("ID không hợp lệ, Mẫu: Pxxxx, VD: P1234");
-    } else {
-      if (product?.find((p) => p.id === id)) {
-        errors.push("ID này đã tồn tại 1 sản phẩm");
-      }
+      errorsMessage.productId = "ID không hợp lệ, Mẫu: Pxxxx, VD: P1234";
+    } else if (product?.find((p) => p.id === id)) {
+      errorsMessage.productId = "ID này đã tồn tại 1 sản phẩm";
     }
+
     if (!name.trim()) {
-      errors.push("Tên sản phẩm không được bỏ trống");
+      errorsMessage.productName = "Tên sản phẩm không được bỏ trống";
     }
+
     if (!date) {
-      errors.push("Hãy nhập ngày hợp lệ");
+      errorsMessage.productDate = "Hãy nhập ngày hợp lệ";
     }
-    if (isNaN(price) || price < 0) {
-      errors.push("Giá tiền phải là chữ số và lớn hơn hoặc bằng 1.000đ");
+
+    if (isNaN(price) || price < 1000) {
+      errorsMessage.productPrice = "Giá tiền phải là số và lớn hơn hoặc bằng 1.000đ";
     }
+
     if (isNaN(quantity) || quantity < 0) {
-      errors.push("Số lượng phải là chữ số và lớn hơn hoặc bằng 0");
+      errorsMessage.productQuantity = "Số lượng phải là chữ số và lớn hơn hoặc bằng 0";
     }
-    if (category === "") {
-      errors.push("Hãy chọn thể loại của sản phẩm");
+
+    if (!category || category === "select category") {
+      errorsMessage.productCategory = "Hãy chọn thể loại của sản phẩm";
     }
+
     if (!descreption.trim()) {
-      errors.push("Không được để trống mô tả cho sản phẩm");
+      errorsMessage.productDescreption = "Không được để trống mô tả cho sản phẩm";
     }
-    if (images === "") {
-      errors.push("Hãy điền đường dẫn của ảnh");
+
+    if (!images) {
+      errorsMessage.productImageLink = "Hãy điền đường dẫn của ảnh";
     }
-    if (status === "no_select") {
-      errors.push("Chưa cập nhật trạng thái");
+
+    if (!status || status === "no_select") {
+      errorsMessage.productStatus = "Chưa cập nhật trạng thái";
     }
-    if (errors.length === 0) {
-      let newProduct = {
+
+    if (Object.keys(errorsMessage).length === 0) {
+      const newProduct = {
         id: id,
         name: name,
         price: price,
@@ -100,9 +108,9 @@ function CreateProduct(props) {
         descreption: descreption,
         date: date,
         status: status,
+        images: images,
       };
 
-      // Fetch POST request để thêm sản phẩm mới vào cơ sở dữ liệu
       fetch("http://localhost:9999/products", {
         method: "POST",
         headers: {
@@ -117,25 +125,16 @@ function CreateProduct(props) {
           return response.json();
         })
         .then((data) => {
-          alert(`"${newProduct.name}" created successfully`);
+          alert(`\"${newProduct.name}\" created successfully`);
           navigate("/productadmin");
         })
         .catch((error) => {
           console.error("Error:", error);
-          setError(["Failed to add product"]);
+          setErrorsMessage({ global: "Failed to add product" });
         });
     } else {
-      setError(errors);
-      showAlert(errors);
+      setErrorsMessage(errorsMessage);
     }
-  };
-
-  const showAlert = (errors) => {
-    let errorMessage = "Please fill in the following fields with valid data:\n";
-    for (let fieldName in errors) {
-      errorMessage += `${fieldName}: ${errors[fieldName]}\n`;
-    }
-    alert(errorMessage);
   };
 
   return (
@@ -157,60 +156,27 @@ function CreateProduct(props) {
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="productId" className="proCreate-form-group">
             <Form.Label className="proCreate-form-label">ID(*)</Form.Label>
-            <Form.Control
-              type="text"
-              name="productId"
-              placeholder="Nhập ID"
-              className="proCreate-form-control"
-            />
+            <Form.Control type="text" name="productId" placeholder="Nhập ID" className="proCreate-form-control" isInvalid={!!errors.productId} />
+            <Form.Control.Feedback type="invalid">{errors.productId}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="productName" className="proCreate-form-group">
-            <Form.Label className="proCreate-form-label">
-              Tên Sản Phẩm (*)
-            </Form.Label>
-            <Form.Control
-              type="text"
-              name="productName"
-              placeholder="Nhập tên sản phẩm"
-              className="proCreate-form-control"
-            />
+            <Form.Label className="proCreate-form-label">Tên Sản Phẩm (*)</Form.Label>
+            <Form.Control type="text" name="productName" placeholder="Nhập tên sản phẩm" className="proCreate-form-control" isInvalid={!!errors.productName} />
+            <Form.Control.Feedback type="invalid">{errors.productName}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="productPrice" className="proCreate-form-group">
-            <Form.Label className="proCreate-form-label">
-              Giá Tiền (*)
-            </Form.Label>
-            <Form.Control
-              type="number"
-              name="productPrice"
-              placeholder="Nhập giá tiền"
-              className="proCreate-form-control"
-            />
+            <Form.Label className="proCreate-form-label">Giá Tiền (*)</Form.Label>
+            <Form.Control type="number" name="productPrice" placeholder="Nhập giá tiền" className="proCreate-form-control" isInvalid={!!errors.productPrice} />
+            <Form.Control.Feedback type="invalid">{errors.productPrice}</Form.Control.Feedback>
           </Form.Group>
-          <Form.Group
-            controlId="productQuantity"
-            className="proCreate-form-group"
-          >
-            <Form.Label className="proCreate-form-label">
-              Số Lượng (*)
-            </Form.Label>
-            <Form.Control
-              type="number"
-              name="productQuantity"
-              placeholder="Nhập số lượng"
-              className="proCreate-form-control"
-            />
+          <Form.Group controlId="productQuantity" className="proCreate-form-group">
+            <Form.Label className="proCreate-form-label">Số Lượng (*)</Form.Label>
+            <Form.Control type="number" name="productQuantity" placeholder="Nhập số lượng" className="proCreate-form-control" isInvalid={!!errors.productQuantity} />
+            <Form.Control.Feedback type="invalid">{errors.productQuantity}</Form.Control.Feedback>
           </Form.Group>
-          <Form.Group
-            controlId="productCategory"
-            className="proCreate-form-group"
-          >
-            <Form.Label className="proCreate-form-label">
-              Thể Loại (*)
-            </Form.Label>
-            <Form.Select
-              name="productCategory"
-              className="proCreate-form-select"
-            >
+          <Form.Group controlId="productCategory" className="proCreate-form-group">
+            <Form.Label className="proCreate-form-label">Thể Loại (*)</Form.Label>
+            <Form.Select name="productCategory" className="proCreate-form-select" isInvalid={!!errors.productCategory}>
               <option value={""}>Chọn thể loại</option>
               {props.categories.map((c) => (
                 <option key={c.id} value={c.id}>
@@ -218,37 +184,27 @@ function CreateProduct(props) {
                 </option>
               ))}
             </Form.Select>
+            <Form.Control.Feedback type="invalid">{errors.productCategory}</Form.Control.Feedback>
           </Form.Group>
-          <Form.Group
-            controlId="productDescreption"
-            className="proCreate-form-group"
-          >
+          <Form.Group controlId="productDescreption" className="proCreate-form-group">
             <Form.Label className="proCreate-form-label">Mô tả (*)</Form.Label>
             <Form.Control
               as="textarea"
               name="productDescreption"
               placeholder="Viết mô tả cho sản phẩm"
               className="proCreate-form-control"
+              isInvalid={!!errors.productDescreption}
             />
+            <Form.Control.Feedback type="invalid">{errors.productDescreption}</Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="productImageLink">
-            <Form.Label className="proCreate-form-label">
-              Đường dẫn của Ảnh (*)
-            </Form.Label>
-            <Form.Control
-              type="text"
-              name="productImageLink"
-              placeholder="/assets/images/productX.png | Thay X = số"
-            />
+            <Form.Label className="proCreate-form-label">Đường dẫn của Ảnh (*)</Form.Label>
+            <Form.Control type="text" name="productImageLink" placeholder="/assets/images/productX.png | Thay X = số" isInvalid={!!errors.productImageLink} />
+            <Form.Control.Feedback type="invalid">{errors.productImageLink}</Form.Control.Feedback>
           </Form.Group>
-          <p style={{ color: "red" }}>
-            (*)Lưu ý: Phải đưa ảnh sản phẩm vào folder "/public/assets/images"
-            trước rồi mới điền link. Đặt tên product theo số tiếp theo
-          </p>
+          <p style={{ color: "red" }}>(*)Lưu ý: Phải đưa ảnh sản phẩm vào folder "/public/assets/images" trước rồi mới điền link. Đặt tên product theo số tiếp theo</p>
           <Form.Group controlId="productDate" className="proCreate-form-group">
-            <Form.Label className="proCreate-form-label">
-              Ngày thêm (*)
-            </Form.Label>
+            <Form.Label className="proCreate-form-label">Ngày thêm (*)</Form.Label>
             <Form.Control
               type="date"
               name="productDate"
@@ -256,27 +212,20 @@ function CreateProduct(props) {
               pattern="yyyy-mm-dd"
               onChange={(e) => setCreateAt(e.target.value)}
               className="proCreate-form-control"
+              isInvalid={!!errors.productDate}
             />
+            <Form.Control.Feedback type="invalid">{errors.productDate}</Form.Control.Feedback>
           </Form.Group>
-          <Form.Group
-            controlId="productStatus"
-            className="proCreate-form-group"
-          >
-            <Form.Label className="proCreate-form-label">Status</Form.Label>
-            <Form.Select
-              name="productStatus"
-              className="proCreate-form-control"
-            >
+          <Form.Group controlId="productStatus" className="proCreate-form-group">
+            <Form.Label className="proCreate-form-label">Trạng thái</Form.Label>
+            <Form.Select name="productStatus" className="proCreate-form-control" isInvalid={!!errors.productStatus}>
               <option value="no_select">Chưa Lựa Chọn</option>
               <option value="in_stock">Còn hàng</option>
               <option value="out_of_stock">Hết hàng</option>
             </Form.Select>
+            <Form.Control.Feedback type="invalid">{errors.productStatus}</Form.Control.Feedback>
           </Form.Group>
-          <Button
-            type="submit"
-            variant="primary"
-            className="proCreate-button-submit"
-          >
+          <Button type="submit" variant="primary" className="proCreate-button-submit">
             Hoàn tất
           </Button>{" "}
           <Button
@@ -292,7 +241,7 @@ function CreateProduct(props) {
           >
             Làm mới
           </Button>
-          <p style={{color:"purple"}}>(*)Kiểm tra kỹ lưỡng thông tin sản phẩm trước khi tạo mới</p>
+          <p style={{ color: "purple" }}>(*)Kiểm tra kỹ lưỡng thông tin sản phẩm trước khi tạo mới</p>
         </Form>
       </Row>
     </Container>

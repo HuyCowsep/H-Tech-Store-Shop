@@ -160,7 +160,9 @@ function App() {
                 </>
               }
             />
+            {/* Trang Error 403 */}
             <Route path="/accessdenied" element={<AccessDenied />} />
+            {/* Giỏ hàng */}
             <Route
               path="/cart"
               element={

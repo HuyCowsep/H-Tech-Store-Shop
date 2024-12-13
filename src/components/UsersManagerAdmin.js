@@ -133,6 +133,19 @@ export default function UserManagement() {
           style={{ backgroundColor: "#f8f9fa", padding: "15px", borderRadius: "8px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", marginBottom: "20px" }}
         >
           <div>
+            <h3
+              style={{
+                textAlign: "center",
+                borderRadius: "10px",
+                padding: "2px",
+                backgroundColor: "grey",
+                color: "white",
+                marginBottom: "50px",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+              }}
+            >
+              Quản Trị Viên
+            </h3>
             <Button variant="success" as={Link} to={"/productuser"} style={{ display: "block", width: "100%", marginTop: "10px" }}>
               Giao Diện Của Khách
             </Button>

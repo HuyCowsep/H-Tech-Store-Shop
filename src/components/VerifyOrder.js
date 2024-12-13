@@ -3,9 +3,11 @@ import { Row, Col, Button, Table, Form, Container, Alert } from "react-bootstrap
 import { Link, useNavigate } from "react-router-dom";
 import Home from "@mui/icons-material/Home";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { toast } from "react-toastify";
 
 function VerifyOrder() {
   const navigate = useNavigate();
+  const [hover, setHover] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
@@ -44,8 +46,8 @@ function VerifyOrder() {
     // "2024-04-24T15:30:00" => ["2024-04-24", "15:30:00"];
     const currentDate = new Date();
     const formattedCurrentDate = currentDate.toISOString().split("T")[0];
-    let errors = [];
 
+    let errors = [];
     if (firstName.trim() === "") {
       errors.push("Vui lòng điền First Name");
     }
@@ -114,7 +116,12 @@ function VerifyOrder() {
         if (response.ok) {
           localStorage.removeItem("cart");
           localStorage.removeItem("cartCount");
-          alert("Đơn hàng của bạn đã được đặt thành công");
+          toast.success(`Đơn hàng của bạn đã được đặt thành công!`, {
+            autoClose: 2000,
+            closeButton: false,
+            hideProgressBar: true,
+            position: "top-center",
+          });
           navigate("/");
         } else {
           throw new Error("Gửi đơn đặt hàng không thành công");
@@ -125,20 +132,26 @@ function VerifyOrder() {
         alert("Có lỗi khi đặt hàng. Hãy thử lại sau");
       });
   };
-
+  //Hàm xử lý xoá hết giỏ hàng
   const handleClearAll = () => {
     localStorage.removeItem("cart");
     localStorage.removeItem("cartCount");
     window.location.reload();
+    toast.success(`Bạn đã xoá toàn bộ sản phẩm trong giỏ hàng`, {
+      autoClose: 2000,
+      closeButton: false,
+      hideProgressBar: true,
+      position: "top-center",
+    });
   };
-
+  //Hàm xử lý xoá riêng 1 sản phẩm nào đó
   const handleRemove = (id) => {
     const updatedCart = cart.filter((item) => item.id !== id);
     setCart(updatedCart);
     const remainingItemsCount = updatedCart.length;
     localStorage.setItem("cartCount", remainingItemsCount.toString());
   };
-
+  //Hàm thay đổi số lượng của 1 sản phẩm nào đó
   const handleQuantityChange = (id, change) => {
     const itemToUpdate = cart.find((item) => item.id === id);
     if (!itemToUpdate) {
@@ -163,7 +176,7 @@ function VerifyOrder() {
       })
       .filter((item) => item.quantity > 0);
     setCart(updatedCart);
-    //tính lại số lượng mặt hàng trong giỏ khi có sản phẩm nào đó bị loại về 0, quantity không liên quan đến cartCount
+    //tính lại số lượng mặt hàng trong giỏ khi có sản phẩm nào đó bị giảm về 0
     const remainingItemsCount = updatedCart.length;
     localStorage.setItem("cartCount", remainingItemsCount.toString());
   };
@@ -228,11 +241,39 @@ function VerifyOrder() {
                       <input
                         type="number"
                         min="1"
+                        max={10}
                         value={c.quantity}
-                        onChange={(e) => handleQuantityChange(c.id, parseInt(e.target.value) - c.quantity)}
+                        onChange={(e) => {
+                          const newQuantity = parseInt(e.target.value);
+                          if (newQuantity > 10) {
+                            toast.success(`Bạn chỉ có thể mua tối đa 10 sản phẩm trong ngày!`, {
+                              autoClose: 2000,
+                              closeButton: false,
+                              hideProgressBar: true,
+                              position: "top-center",
+                            });
+                            return;
+                          }
+                          handleQuantityChange(c.id, newQuantity - c.quantity);
+                        }}
                         style={{ width: "50px", textAlign: "center", margin: "0 5px" }}
                       />
-                      <Button variant="secondary" size="sm" onClick={() => handleQuantityChange(c.id, 1)}>
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        onClick={() => {
+                          if (c.quantity >= 10) {
+                            toast.success(`Bạn chỉ có thể mua tối đa 10 sản phẩm trong ngày!`, {
+                              autoClose: 2000,
+                              closeButton: false,
+                              hideProgressBar: true,
+                              position: "top-center",
+                            });
+                            return;
+                          }
+                          handleQuantityChange(c.id, 1);
+                        }}
+                      >
                         +
                       </Button>
                     </td>
@@ -314,7 +355,19 @@ function VerifyOrder() {
                 <Col>
                   <div>
                     <span>
-                      <Button type="submit" style={{ borderColor: "orange", backgroundColor: "orange", color: "white", marginBottom: "5px", marginLeft: "-4px" }}>
+                      <Button
+                        type="submit"
+                        style={{
+                          borderColor: "orange",
+                          backgroundColor: hover ? "#FFD700" : "orange", // Hover: Vàng sáng
+                          color: hover ? "black" : "white", // Đổi màu chữ khi hover để rõ ràng hơn
+                          marginBottom: "5px",
+                          marginLeft: "-4px",
+                          transition: "background-color 0.3s ease, color 0.3s ease", // Hiệu ứng mượt
+                        }}
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
+                      >
                         Thanh Toán Ngay
                       </Button>
                     </span>{" "}

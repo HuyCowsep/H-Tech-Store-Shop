@@ -3,6 +3,7 @@ import { Row, Col, Button, Container, Table, Alert, FloatingLabel, Form, Modal }
 import { Link, useNavigate } from "react-router-dom";
 import Home from "@mui/icons-material/Home";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { toast } from "react-toastify";
 import "./css/Style.css";
 
 function Cart() {
@@ -30,11 +31,21 @@ function Cart() {
     const form = document.getElementById("form-modal");
     if (form.checkValidity() === false) {
       e.preventDefault();
-      alert("Hãy điền đầy đủ thông tin vận chuyển!");
+      toast.success(`Hãy điền đầy đủ thông tin vận chuyển!`, {
+        autoClose: 2000,
+        closeButton: false,
+        hideProgressBar: true,
+        position: "top-center",
+      });
       e.stopPropagation();
     } else {
       setValidated(true); // hiển thị thông báo lỗi
-      alert("Thông tin của bạn đã được lưu thành công!");
+      toast.success(`Thông tin vận chuyển của bạn được lưu thành công!`, {
+        autoClose: 2000,
+        closeButton: false,
+        hideProgressBar: true,
+        position: "top-center",
+      });
       handleCloseModal();
     }
     // Cập nhật các state để lưu thông tin từ Modal
@@ -52,7 +63,6 @@ function Cart() {
       setPhone("");
       setEmail("");
       setRequestDate("");
-
       setValidated(false);
     }
   };
@@ -64,9 +74,10 @@ function Cart() {
     } else {
       setAlertMessage("Đã ghi nhận, chúng tôi sẽ kiểm tra Mã Giảm Giá của bạn");
       setShowAlert(true);
+      setCoupon("");
       setTimeout(() => {
         setShowAlert(false);
-      }, 3500);
+      }, 4000);
     }
   };
 
@@ -169,11 +180,15 @@ function Cart() {
 
   const handleCheckout = (cart) => {
     if (!cart || cart.length === 0) {
-      alert("Không có sản phẩm trong giỏ hàng");
       return false;
     }
     if (!fullName || !address || !phone || !email || !requestDate) {
-      alert("Vui lòng nhập đầy đủ thông tin vận chuyển.");
+      toast.success(`Hãy điền đầy đủ thông tin vận chuyển!`, {
+        autoClose: 2000,
+        closeButton: false,
+        hideProgressBar: true,
+        position: "top-center",
+      });
       return false;
     }
     const accountOrder = {
