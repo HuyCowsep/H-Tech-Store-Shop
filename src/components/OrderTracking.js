@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button, Container, Row, Alert, Col, Card } from "react-bootstrap";
 import "./css/style-order-tracking.css";
 import Swal from "sweetalert2";
+import Footer from "./Footer";
 
 export default function OrderTracking() {
   const [orders, setOrders] = useState([]); // Danh sách đơn hàng
@@ -126,55 +127,57 @@ export default function OrderTracking() {
           </h1>
 
           {/* Đơn hàng đang xử lý */}
-          <h3>
-            {" "}
-            Trạng Thái: <span style={{ color: "orange", marginTop: "20px" }}>Đang Xử Lý</span>{" "}
-          </h3>
-          {orders
-            .filter((order) => order.status === "Ordered")
-            .map((order) => (
-              <Card
-                key={order.id}
-                style={{
-                  marginBottom: "20px",
-                  border: "1px solid #ddd",
-                  padding: "15px",
-                  borderRadius: "8px",
-                  backgroundColor: "#fff",
-                }}
-              >
-                <Row>
-                  <Col>
-                    <p>
-                      <strong>Mã đơn hàng:</strong> {order.id}
-                    </p>
-                    <p>
-                      <strong>Ngày đặt hàng:</strong> {new Date(order.orderAt).toLocaleDateString("vi-VN")}
-                    </p>
-                  </Col>
-                  <Col>
-                    <p>
-                      <strong>Ngày yêu cầu nhận:</strong> {new Date(order.reqDate).toLocaleDateString("vi-VN")}
-                    </p>
-                    <p>
-                      <strong>Tổng tiền:</strong> <span style={{ color: "red" }}>{formatPrice(order.total)}</span>
-                    </p>
-                  </Col>
-                </Row>
-                {/* Gọi hàm renderOrderProducts */}
-                {renderOrderProducts(order.product)}
-                <Button variant="danger" onClick={() => cancelOrder(order.id)} style={{ marginTop: "20px" }}>
-                  Huỷ đơn hàng
-                </Button>
-              </Card>
-            ))}
+          {orders.filter((order) => order.status === "Ordered").length > 0 && (
+            <>
+              <h3>
+                Trạng Thái: <span style={{ color: "orange", marginTop: "20px" }}>Đang Xử Lý</span>
+              </h3>
+              {orders
+                .filter((order) => order.status === "Ordered")
+                .map((order) => (
+                  <Card
+                    key={order.id}
+                    style={{
+                      marginBottom: "20px",
+                      border: "1px solid #ddd",
+                      padding: "15px",
+                      borderRadius: "8px",
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    <Row>
+                      <Col>
+                        <p>
+                          <strong>Mã đơn hàng:</strong> {order.id}
+                        </p>
+                        <p>
+                          <strong>Ngày đặt hàng:</strong> {new Date(order.orderAt).toLocaleDateString("vi-VN")}
+                        </p>
+                      </Col>
+                      <Col>
+                        <p>
+                          <strong>Tổng tiền:</strong> <span style={{ color: "red" }}>{formatPrice(order.total)}</span>
+                        </p>
+                      </Col>
+                    </Row>
+
+                    {/* Gọi hàm renderOrderProducts */}
+                    {renderOrderProducts(order.product)}
+
+                    <Button variant="danger" onClick={() => cancelOrder(order.id)} style={{ marginTop: "20px" }}>
+                      Huỷ đơn hàng
+                    </Button>
+                  </Card>
+                ))}
+            </>
+          )}
 
           {/* Đơn hàng đã duyệt */}
           {orders.filter((order) => order.status === "Approved").length > 0 && (
             <>
               <h3>
                 {" "}
-                Trạng Thái: <span style={{ color: "green", marginTop: "20px" }}>Đã Được Duyệt</span>{" "}
+                Trạng Thái: <span style={{ color: "green", marginTop: "20px" }}>Đã Được Duyệt, Chờ Giao Hàng</span>{" "}
               </h3>
               {orders
                 .filter((order) => order.status === "Approved")
@@ -207,43 +210,7 @@ export default function OrderTracking() {
                         </p>
                       </Col>
                     </Row>
-                    <Row>
-                      <Col>
-                        <h5>Sản phẩm:</h5>
-                        {order.product.map((item, i) => (
-                          <div
-                            key={item.id || i}
-                            style={{
-                              borderBottom: "1px solid #ddd",
-                              marginBottom: "10px",
-                              paddingBottom: "10px",
-                            }}
-                          >
-                            <Row>
-                              <Col md="2">
-                                <img
-                                  src={item.image}
-                                  alt={item.pName}
-                                  style={{
-                                    width: "100%",
-                                    height: "auto",
-                                  }}
-                                />
-                              </Col>
-                              <Col md="6">
-                                <p>{item.pName}</p>
-                              </Col>
-                              <Col md="2">
-                                <p>Số lượng: {item.quantity}</p>
-                              </Col>
-                              <Col md="2">
-                                <p>{formatPrice(item.price)}</p>
-                              </Col>
-                            </Row>
-                          </div>
-                        ))}
-                      </Col>
-                    </Row>
+
                     {/* Gọi hàm renderOrderProducts */}
                     {renderOrderProducts(order.product)}
                   </Card>
@@ -291,7 +258,7 @@ export default function OrderTracking() {
                     </Row>
                     {/* Gọi hàm renderOrderProducts */}
                     {renderOrderProducts(order.product)}
-                    <Button variant="primary" as={Link} to={`/productuser/${order.product[0].id}`} style={{ marginTop: "20px" }}>
+                    <Button variant="warning" as={Link} to={`/productuser/${order.product[0].id}`} style={{ marginTop: "20px" }}>
                       Mua lại sản phẩm này
                     </Button>
                   </Card>
@@ -345,6 +312,8 @@ export default function OrderTracking() {
           )}
         </Container>
       </section>
+
+      <Footer />
     </>
   );
 

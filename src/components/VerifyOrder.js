@@ -184,7 +184,7 @@ function VerifyOrder() {
   return (
     <Container fluid>
       <Row style={{ textAlign: "center", fontWeight: "bold", marginTop: "19px", marginBottom: "20px" }}>
-        <h1 style={{ border: "2px solid black", borderRadius: "10px", padding: "10px", backgroundColor: "#DCDCE6" }}>XÁC MINH CHI TIẾT ĐƠN HÀNG</h1>
+        <h1>Giỏ Hàng Của Bạn</h1>
       </Row>
       {cart.length === 0 ? (
         <Alert variant="danger" style={{ margin: "auto", height: "auto", fontSize: "1.5rem" }}>

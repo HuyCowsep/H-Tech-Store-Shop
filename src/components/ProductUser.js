@@ -405,12 +405,19 @@ export default function ProductUser({ isLogin }) {
                 style={{ color: "white" }}
                 as={Link}
                 to="/productuser"
-                onClick={() => window.location.reload()}
+                onClick={() => {
+                  if (window.scrollY === 0) {
+                    window.location.reload();
+                  } else {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
                 onMouseEnter={(e) => (e.target.style.color = "yellow")}
                 onMouseLeave={(e) => (e.target.style.color = "white")}
               >
                 Sản phẩm
               </Nav.Link>
+
               <Nav.Link
                 style={{ color: "white" }}
                 as={Link}

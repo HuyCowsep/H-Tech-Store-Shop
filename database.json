@@ -956,34 +956,6 @@
           "price": 5364145,
           "quantity": 1,
           "image": "/assets/images/product43.png"
-        },
-        {
-          "pid": "P0044",
-          "pName": "Loa bluetooth thông minh kèm trợ lý ảo",
-          "price": 59512444,
-          "quantity": 1,
-          "image": "/assets/images/product44.png"
-        },
-        {
-          "pid": "P0046",
-          "pName": "Máy rửa bát bán âm Richborn RDG6080SQB",
-          "price": 9251444,
-          "quantity": 1,
-          "image": "/assets/images/product46.png"
-        },
-        {
-          "pid": "P0045",
-          "pName": "Máy Giặt TOSHIBA 9.5Kg TW-BK105S3V (SK)",
-          "price": 6251444,
-          "quantity": 1,
-          "image": "/assets/images/product45.png"
-        },
-        {
-          "pid": "P0001",
-          "pName": "Tivi LG UHD tích hợp AI giọng nói",
-          "price": 20000000,
-          "quantity": 1,
-          "image": "/assets/images/product1.png"
         }
       ],
       "vat": "8%",
@@ -1014,34 +986,6 @@
           "price": 10000000,
           "quantity": 2,
           "image": "/assets/images/product2.png"
-        },
-        {
-          "pid": "P0050",
-          "pName": "Samsung Neo QLED",
-          "price": 11520000,
-          "quantity": 1,
-          "image": "/assets/images/product50.png"
-        },
-        {
-          "pid": "P0051",
-          "pName": "Panasonic JZ2000 OLED",
-          "price": 11000000,
-          "quantity": 1,
-          "image": "/assets/images/product51.png"
-        },
-        {
-          "pid": "P0052",
-          "pName": "Xiaomi Mi TV Q1",
-          "price": 12000000,
-          "quantity": 1,
-          "image": "/assets/images/product52.png"
-        },
-        {
-          "pid": "P0053",
-          "pName": "TCL QLED 6-Series",
-          "price": 13000000,
-          "quantity": 1,
-          "image": "/assets/images/product53.png"
         }
       ],
       "vat": "8%",
@@ -1170,6 +1114,29 @@
       "status": "Ordered",
       "orderAt": "2024-12-13",
       "reqDate": "2024-12-21"
+    },
+    {
+      "id": "b5ed",
+      "accountId": "3",
+      "fullName": "Người Giàu Online",
+      "address": "1212121212121212",
+      "phone": "0999999999",
+      "email": "huyndhe176876@fpt.edu.vn",
+      "product": [
+        {
+          "pid": "P0001",
+          "pName": "Tivi LG UHD - AI Voice",
+          "price": 20000000,
+          "quantity": 1,
+          "image": "/assets/images/product1.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "21.600.000 ₫",
+      "shipping": 0,
+      "status": "Ordered",
+      "orderAt": "2024-12-13",
+      "reqDate": "2024-12-15"
     }
   ],
   "reviews": [
