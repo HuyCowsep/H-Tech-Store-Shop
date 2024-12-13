@@ -23,7 +23,6 @@ function Cart() {
   let currentAccount;
   if (storedAccounts) {
     const accounts = JSON.parse(storedAccounts);
-    console.log("accounts trong localStorage:", accounts);
     currentAccount = accounts[0];
   }
 
@@ -179,6 +178,10 @@ function Cart() {
   const [requestDate, setRequestDate] = useState("");
 
   const handleCheckout = (cart) => {
+    if (currentAccount?.role === "admin") {
+      alert("Admin không thể mua hàng! Hãy đăng ký tài khoản mới và trải nghiệm ngay.");
+      return;
+    }
     if (!cart || cart.length === 0) {
       return false;
     }

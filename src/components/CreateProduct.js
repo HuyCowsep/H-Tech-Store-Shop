@@ -125,7 +125,7 @@ function CreateProduct(props) {
           return response.json();
         })
         .then((data) => {
-          alert(`\"${newProduct.name}\" created successfully`);
+          alert(`"${newProduct.name}" created successfully`);
           navigate("/productadmin");
         })
         .catch((error) => {
@@ -145,7 +145,7 @@ function CreateProduct(props) {
       <Row className="proCreate-row">
         <Col className="col-md-5">
           <Link to={"/productadmin"} className="proCreate-btn-primary btn">
-            &larr; Trở về
+            <span className="text-white"> &larr; Trở về</span>
           </Link>
         </Col>
         <Col className="col-md-7">
@@ -240,6 +240,9 @@ function CreateProduct(props) {
             }}
           >
             Làm mới
+          </Button>
+          <Button type="button" variant="secondary" className="proCreate-button-cancel" onClick={() => navigate("/productadmin")}>
+            Hủy Bỏ
           </Button>
           <p style={{ color: "purple" }}>(*)Kiểm tra kỹ lưỡng thông tin sản phẩm trước khi tạo mới</p>
         </Form>

@@ -359,11 +359,11 @@ function VerifyOrder() {
                         type="submit"
                         style={{
                           borderColor: "orange",
-                          backgroundColor: hover ? "#FFD700" : "orange", // Hover: Vàng sáng
-                          color: hover ? "black" : "white", // Đổi màu chữ khi hover để rõ ràng hơn
+                          backgroundColor: hover ? "#FFD700" : "orange",
+                          color: hover ? "black" : "white",
                           marginBottom: "5px",
                           marginLeft: "-4px",
-                          transition: "background-color 0.3s ease, color 0.3s ease", // Hiệu ứng mượt
+                          transition: "background-color 0.3s ease, color 0.3s ease",
                         }}
                         onMouseEnter={() => setHover(true)}
                         onMouseLeave={() => setHover(false)}

@@ -914,7 +914,7 @@
       "id": "069d",
       "orderDate": "2024-12-04",
       "requestDate": "2024-12-06",
-      "status": "Approved",
+      "status": "Archived",
       "customer": {
         "firstName": "Michale",
         "lastName": "Van Ngu",
@@ -994,57 +994,6 @@
       "orderAt": "2024-11-21"
     },
     {
-      "id": "c5de",
-      "accountId": null,
-      "fullName": "Dương Thị Quỳnh Anh",
-      "address": "Thôn 3 thạch hoà, thạch thất, hà nội",
-      "phone": "0123123123",
-      "email": "AnhDTQ1304@fpt.edu.vn",
-      "product": [
-        {
-          "pid": "P0001",
-          "pName": "Tivi LG UHD - AI Voice",
-          "price": 20000000,
-          "quantity": 1,
-          "image": "/assets/images/product1.png"
-        },
-        {
-          "pid": "P0056",
-          "pName": "iPhone 16",
-          "price": 29000000,
-          "quantity": 1,
-          "image": "/assets/images/product56.png"
-        },
-        {
-          "pid": "P0059",
-          "pName": "iPhone 16 Promax",
-          "price": 35000000,
-          "quantity": 1,
-          "image": "/assets/images/product59.png"
-        },
-        {
-          "pid": "P0007",
-          "pName": "iPad Pro M2 11 inch WiFi Cellular 128GB",
-          "price": 31500000,
-          "quantity": 1,
-          "image": "/assets/images/product7.png"
-        },
-        {
-          "pid": "P0012",
-          "pName": "Laptop Gaming ACER Nitro 51140P",
-          "price": 35380000,
-          "quantity": 1,
-          "image": "/assets/images/product12.png"
-        }
-      ],
-      "vat": "8%",
-      "total": "152.195.674 ₫",
-      "shipping": 0,
-      "status": "Archived",
-      "orderAt": "2024-11-25",
-      "reqDate": "2024-11-30"
-    },
-    {
       "id": "33c5",
       "accountId": "2",
       "fullName": "USER4 Nè",
@@ -1121,7 +1070,7 @@
       "vat": "8%",
       "total": "23.240.909 ₫",
       "shipping": 0,
-      "status": "Approved",
+      "status": "Archived",
       "orderAt": "2024-12-04",
       "reqDate": "2024-12-31"
     },
@@ -1161,6 +1110,66 @@
       "status": "Approved",
       "orderAt": "2024-12-04",
       "reqDate": "2024-12-13"
+    },
+    {
+      "id": "7b7b",
+      "accountId": "3",
+      "fullName": "test 1",
+      "address": "test 1",
+      "phone": "0123456789",
+      "email": "test1@gmail.com",
+      "product": [
+        {
+          "pid": "P0010",
+          "pName": "iPhone 16 Plus",
+          "price": 30000000,
+          "quantity": 1,
+          "image": "/assets/images/product57.png"
+        },
+        {
+          "pid": "P0011",
+          "pName": "iPhone 16 Pro",
+          "price": 32000000,
+          "quantity": 1,
+          "image": "/assets/images/product58.png"
+        },
+        {
+          "pid": "P0012",
+          "pName": "iPhone 16 Promax",
+          "price": 35000000,
+          "quantity": 1,
+          "image": "/assets/images/product59.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "104.760.000 ₫",
+      "shipping": 0,
+      "status": "Rejected",
+      "orderAt": "2024-12-13",
+      "reqDate": "2024-12-22"
+    },
+    {
+      "id": "3a4d",
+      "accountId": "3",
+      "fullName": "zxczxczx",
+      "address": "zxczxczxc",
+      "phone": "0999999999",
+      "email": "zxczxc@gmail.com",
+      "product": [
+        {
+          "pid": "P0006",
+          "pName": "TCL QLED 6-Series",
+          "price": 13000000,
+          "quantity": 1,
+          "image": "/assets/images/product53.png"
+        }
+      ],
+      "vat": "8%",
+      "total": "14.040.000 ₫",
+      "shipping": 0,
+      "status": "Ordered",
+      "orderAt": "2024-12-13",
+      "reqDate": "2024-12-21"
     }
   ],
   "reviews": [
