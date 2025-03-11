@@ -1,74 +1,41 @@
-<<<<<<< HEAD
-# H-Tech-Store-Shop
-=======
-# Getting Started with Create React App
+🛍️ H-Tech Store - Frontend
+🚀 H-Tech Store là giao diện website bán hàng điện tử hiện đại, hỗ trợ trải nghiệm mua sắm trực quan, mượt mà.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 Tính năng chính
+✅ Hiển thị danh mục sản phẩm: điện thoại, tai nghe, loa, điện lạnh,...
+✅ Tìm kiếm, lọc sản phẩm theo danh mục
+✅ Thêm vào giỏ hàng, xem chi tiết sản phẩm
+✅ Hiển thị giao diện thân thiện, tối ưu trên mobile & desktop
 
-## Available Scripts
+🛠️ Công nghệ sử dụng
+React.js ⚛️
+React Router 🚏 (Quản lý điều hướng)
+Context API / Redux (Quản lý trạng thái)
+Styled Components / SCSS 🎨 (Thiết kế giao diện)
+JSON Server 📦 (Giả lập API dữ liệu)
+🔧 Cách chạy dự án
+1️⃣ Clone repo này về máy
 
-In the project directory, you can run:
+git clone https://github.com/HuyCowsep/H-Tech-Store.git
+cd H-Tech-Store
 
-### `npm start`
+2️⃣ Cài đặt package
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3️⃣ Chạy server giả lập JSON
 
-### `npm test`
+npx json-server --watch data.json --port (check_port)
+npm start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📌 Lưu ý
+Đây là dự án frontend, sử dụng JSON Server làm nguồn dữ liệu giả lập, chưa tích hợp backend.
+Nếu muốn triển khai bản fullstack, cần kết nối với database & backend thực tế.
+🔥 H-Tech Store - Trải nghiệm mua sắm tiện lợi! 🔥
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> master
+Contributors:
+- Username: HuyCowsep
+- Fullname: Nguyễn Đức Huy
+- Position: Team Lead
+- Email: huyndhe176876@fpt.edu.vn
+- Created and Design by: HuyCowsep
