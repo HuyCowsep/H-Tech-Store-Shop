@@ -26,6 +26,9 @@ npm install
 3️⃣ Chạy server giả lập JSON
 
 npx json-server --watch data.json --port (check_port)
+
+4️⃣ Chạy frontend
+
 npm start
 
 📌 Lưu ý
